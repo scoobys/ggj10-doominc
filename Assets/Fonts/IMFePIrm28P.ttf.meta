@@ -1,19 +1,20 @@
 fileFormatVersion: 2
-guid: 132f16f68b1ddad40bf0dd1b24f1901c
-timeCreated: 1517052670
+guid: c255a304fc0fbe34999bfc9bb133c9e8
+timeCreated: 1517072999
 licenseType: Free
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
   fontSize: 16
-  forceTextureCase: -2
+  forceTextureCase: -1
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: Pirata One
+  fontName: IM FELL DW Pica
   fontNames:
-  - Pirata One
-  fallbackFontReferences: []
+  - IM FELL DW Pica
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 63741fe7d78415c4e9539c3d39052cce, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1

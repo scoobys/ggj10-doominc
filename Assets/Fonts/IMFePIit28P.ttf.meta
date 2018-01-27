@@ -1,18 +1,18 @@
 fileFormatVersion: 2
-guid: 22cb321b3a7ecdd4db41316975645c51
-timeCreated: 1517052670
+guid: 63741fe7d78415c4e9539c3d39052cce
+timeCreated: 1517072980
 licenseType: Free
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
   fontSize: 16
-  forceTextureCase: -2
+  forceTextureCase: -1
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: IM FELL English SC
+  fontName: IM FELL DW Pica
   fontNames:
-  - IM FELL English SC
+  - IM FELL DW Pica
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

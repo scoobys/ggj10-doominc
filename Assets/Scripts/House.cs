@@ -10,8 +10,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 public class House : MonoBehaviour {
-// päris
-	public Quest[] quests;
+    // päris
+    public List<Question> Questions;
 	private GameObject dialogBox;
 	private TextMeshProUGUI questText;
     public Sprite Lable;
@@ -28,19 +28,18 @@ public class House : MonoBehaviour {
     private GameObject _lable;
     private GameObject _highlight;
     private Transform _transform;
-
-
+    private ClockController _clock;
 
     // Use this for initialization
     void Start () {
-        DialogBoxHolder dialogBoxHolder = transform.parent.gameObject.GetComponent<DialogBoxHolder>();
-        dialogBox = dialogBoxHolder.dialogBox;
-        questText = dialogBoxHolder.questText;
-        questText.text = "";
+        dialogBox = GameObject.FindGameObjectWithTag("Question");
         _isMouseOver = false;
         _lable = null;
+        Questions = new List<Question>() { new Question(),new Question(), new Question()};
         _transform = this.gameObject.GetComponent<Transform>();
         GetData();
+        _clock = GameObject.FindGameObjectWithTag("Clock").GetComponent<ClockController>();
+
     }
 	
 	// Update is called once per frame
@@ -139,46 +138,33 @@ public class House : MonoBehaviour {
 
     void OnMouseUp()
 	{
+        var question = Questions[0];
 		dialogBox.SetActive(true);
-	
-		Quest quest = quests[0];
-		questText.text = quest.questText;
+		questText.text = "Your Action:"; // Kysimus
 		Button[] buttons = dialogBox.GetComponentsInChildren<Button>(true);
 		Debug.Log("nuppe: " + buttons.Length);
 		for (int i = 0; i < buttons.Length; i++)
 		{
-			if (i >= quest.solutions.Length)
-			{
-				break;
-			}
+			//if (i >= question.Answers.Count-1)
+			//{
+			//	break;
+			//}
 			Button b = buttons[i];
-			QuestSolution solution = quest.solutions[i];
-			b.GetComponentInChildren<TextMeshProUGUI>().text = solution.action;
-            b.onClick.AddListener(delegate{HandleOptionSelected(solution);});
+			var answer = "placeholder";
+			b.GetComponentInChildren<TextMeshProUGUI>().text = answer; // nuppu tekst
+            b.onClick.AddListener(delegate{HandleOptionSelected(new Answer());});
 			b.gameObject.SetActive(true);
 		}
 	}
 
-    void HandleOptionSelected(QuestSolution selectedOption)
+    void HandleOptionSelected(Answer selectedOption)
     {
-        Debug.Log("Selected option " + selectedOption.action);
-        Debug.Log("Closer to doom by " + selectedOption.closerToDoom);
+        var random = new System.Random();
+        //Debug.Log("Selected option " + selectedOption.action);
+        //Debug.Log("Closer to doom by " + selectedOption.closerToDoom);
         dialogBox.SetActive(false);
+        Debug.Log(_clock.GetValue());
+        _clock.SetValueOffset(0.5F);
+        Debug.Log(_clock.GetValue());
     }
-}
-
-[System.Serializable]
-public struct Quest
-{
-	public string questText;
-	public QuestSolution[] solutions;
-
-
-}
-
-[System.Serializable]
-public struct QuestSolution
-{
-	public string action;
-	public float closerToDoom;
 }
