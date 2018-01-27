@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 22cb321b3a7ecdd4db41316975645c51
+timeCreated: 1517052670
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: IM FELL English SC
+  fontNames:
+  - IM FELL English SC
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
