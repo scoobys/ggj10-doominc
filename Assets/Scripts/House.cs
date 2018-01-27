@@ -17,14 +17,14 @@ public class House : MonoBehaviour {
     public Sprite Lable;
     public Sprite HighLight;
     public Vector3 LablePosition;
+    public Vector3 HighLightPosition;
     public Vector3 LableScale = new Vector3(0.5F, 0.5F);
 
     public AudioSource EnterSound;
 
-    public float HighlightStep;
+    public float HighlightStep = 0.05F;
 
     private bool _isMouseOver;
-    private float _highLightOpacity;
     private GameObject _lable;
     private GameObject _highlight;
     private Transform _transform;
@@ -35,29 +35,29 @@ public class House : MonoBehaviour {
     void Start () {
         _isMouseOver = false;
         questText.text = "";
-        _highLightOpacity = 0;
         _lable = null;
         _transform = this.gameObject.GetComponent<Transform>();
         GetData();
-        //AddHighlight();
     }
 	
 	// Update is called once per frame
 	void Update () {
-        Highlight();
 	}
 
     private void OnMouseEnter()
     {
         _isMouseOver = true;
-        EnterSound.Play();
-        Addlable();
+        if(EnterSound!=null)  EnterSound.Play();
+            Addlable();
+        AddHighlight();
     }
 
     private void OnMouseExit()
     {
         _isMouseOver = false;
         Destroy(_lable);
+        Destroy(_highlight);
+        if (EnterSound != null) EnterSound.Stop();
     }
 
     private void Addlable()
@@ -76,24 +76,19 @@ public class House : MonoBehaviour {
         _highlight = new GameObject();
         _highlight.AddComponent<SpriteRenderer>();
         _highlight.transform.position = _transform.position;
-        var a = _lable.GetComponent<SpriteRenderer>();
+        if (HighLightPosition != new Vector3(0,0)) _highlight.transform.position = HighLightPosition;
+        var a = _highlight.GetComponent<SpriteRenderer>();
         a.sprite = HighLight;
         a.sortingLayerName = "Highlight";
-        var b = a.color;
-        _highLightOpacity = b.a;
-        _highLightOpacity = 0;
     }
 
 
     void Highlight()
     {
-        if (_isMouseOver && _highLightOpacity < 1)
-        {
-            Debug.Log("highlighting");
-            _highLightOpacity += HighlightStep;
-        }
-        else if (!_isMouseOver && _highLightOpacity > 0) _highLightOpacity -= HighlightStep;
-        var sprite = this.gameObject.GetComponent<SpriteRenderer>();
+        var a = _highlight.GetComponent<SpriteRenderer>();
+        var b = a.color;
+        if (_isMouseOver && b.a < 0.99F) b.a += HighlightStep;
+        else if (!_isMouseOver && b.a > 0.01F) b.a -= HighlightStep;
     }
 
     void GetData()

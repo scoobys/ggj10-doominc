@@ -492,9 +492,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quests: []
   dialogBox: {fileID: 0}
-  questText: {fileID: 0}
   Lable: {fileID: 21300000, guid: 860ad57d81be653499414e6e1dd0d24b, type: 3}
+  HighLight: {fileID: 21300000, guid: 789aa778577924a41be67147d1037c2a, type: 3}
   LablePosition: {x: 4.18, y: 4.18, z: 0}
+  HighLightPosition: {x: 0, y: 0, z: 0}
+  LableScale: {x: 0.5, y: 0.5, z: 0}
+  EnterSound: {fileID: 0}
   HighlightStep: 0
 --- !u!70 &136261325
 CapsuleCollider2D:
@@ -599,9 +602,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quests: []
   dialogBox: {fileID: 0}
-  questText: {fileID: 0}
   Lable: {fileID: 21300000, guid: f49489bfec1838147942e6b11918eafc, type: 3}
+  HighLight: {fileID: 21300000, guid: cffd42f207814e24293fb96a72cf556f, type: 3}
   LablePosition: {x: 11.15, y: -5.72, z: 0}
+  HighLightPosition: {x: 0, y: 0, z: 0}
+  LableScale: {x: 0.5, y: 0.5, z: 0}
+  EnterSound: {fileID: 0}
   HighlightStep: 0
 --- !u!70 &357955334
 CapsuleCollider2D:
@@ -706,9 +712,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quests: []
   dialogBox: {fileID: 0}
-  questText: {fileID: 0}
   Lable: {fileID: 21300000, guid: 2da94d3fb1b230540835a70f7706f29f, type: 3}
+  HighLight: {fileID: 21300000, guid: 236954a43169f9d4fb21361c11e106f3, type: 3}
   LablePosition: {x: -10.15, y: -7.96, z: 0}
+  HighLightPosition: {x: 0, y: 0, z: 0}
+  LableScale: {x: 0.5, y: 0.5, z: 0}
+  EnterSound: {fileID: 0}
   HighlightStep: 0
 --- !u!70 &568876452
 CapsuleCollider2D:
@@ -1047,11 +1056,149 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: adeeb434ddd4a4b0a95bdb5e3c2748f2, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1043379776
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1043379777}
+  m_Layer: 0
+  m_Name: Audio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1043379777
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1043379776}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.004799843, y: -0.0061998367, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1359909282}
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &1071271074 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224657696230846532, guid: adeeb434ddd4a4b0a95bdb5e3c2748f2,
     type: 2}
   m_PrefabInternal: {fileID: 696241090}
+--- !u!1 &1193183026
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1193183028}
+  - component: {fileID: 1193183027}
+  m_Layer: 0
+  m_Name: BackGround
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1193183027
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1193183026}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 9ab11fd647f2c4c4a9bda6e61c3ce108, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!4 &1193183028
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1193183026}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1210520625
 GameObject:
   m_ObjectHideFlags: 0
@@ -1148,9 +1295,12 @@ MonoBehaviour:
     - action: Do stuff 3
       closerToDoom: -10
   dialogBox: {fileID: 135858603}
-  questText: {fileID: 1384530750}
   Lable: {fileID: 21300000, guid: 98926613fe8469c488ea407a1026b5c6, type: 3}
+  HighLight: {fileID: 21300000, guid: 7fc5a19fe19cc014793715ac95406f9e, type: 3}
   LablePosition: {x: 0, y: 0, z: 0}
+  HighLightPosition: {x: 0, y: 0, z: 0}
+  LableScale: {x: 0.5, y: 0.5, z: 0}
+  EnterSound: {fileID: 1359909281}
   HighlightStep: 0.1
 --- !u!70 &1210520629
 CapsuleCollider2D:
@@ -1281,6 +1431,115 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: adeeb434ddd4a4b0a95bdb5e3c2748f2, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1359909280
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1359909282}
+  - component: {fileID: 1359909281}
+  m_Layer: 0
+  m_Name: Church
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1359909281
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1359909280}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: de8a5618858b31144aabbb1716f65d4a, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!4 &1359909282
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1359909280}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1043379777}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1384530748
 GameObject:
   m_ObjectHideFlags: 0
@@ -1443,9 +1702,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quests: []
   dialogBox: {fileID: 0}
-  questText: {fileID: 0}
   Lable: {fileID: 21300000, guid: e83db405f5fee2b43a5feb51c12e5b8c, type: 3}
+  HighLight: {fileID: 21300000, guid: fd0b15bfec48e9f458107afecb8766a1, type: 3}
   LablePosition: {x: 0, y: 0, z: 0}
+  HighLightPosition: {x: -15.04, y: -3.19, z: 0}
+  LableScale: {x: 0.5, y: 0.5, z: 0}
+  EnterSound: {fileID: 0}
   HighlightStep: 0
 --- !u!70 &1533718275
 CapsuleCollider2D:
@@ -1962,9 +2224,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quests: []
   dialogBox: {fileID: 0}
-  questText: {fileID: 0}
   Lable: {fileID: 21300000, guid: 4163962e536f83544936c272ba7a05ac, type: 3}
+  HighLight: {fileID: 21300000, guid: 106def7aee5646a4b81b410152873916, type: 3}
   LablePosition: {x: 11.02, y: 2.71, z: 0}
+  HighLightPosition: {x: 0, y: 0, z: 0}
+  LableScale: {x: 0.5, y: 0.5, z: 0}
+  EnterSound: {fileID: 0}
   HighlightStep: 0
 --- !u!70 &1991487789
 CapsuleCollider2D:
