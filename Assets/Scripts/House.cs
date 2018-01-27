@@ -12,8 +12,8 @@ using TMPro;
 public class House : MonoBehaviour {
 // päris
 	public Quest[] quests;
-	public GameObject dialogBox;
-	public TextMeshProUGUI questText;
+	private GameObject dialogBox;
+	private TextMeshProUGUI questText;
     public Sprite Lable;
     public Sprite HighLight;
     public Vector3 LablePosition;
@@ -33,8 +33,16 @@ public class House : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        _isMouseOver = false;
+        DialogBoxHolder dialogBoxHolder = transform.parent.gameObject.GetComponent<DialogBoxHolder>();
+        dialogBox = dialogBoxHolder.dialogBox;
+        questText = dialogBoxHolder.questText;
         questText.text = "";
+<<<<<<< HEAD
+=======
+
+        _isMouseOver = false;
+        _highLightOpacity = 0;
+>>>>>>> a70e0838cc6e63c4f20757ece77187606acff451
         _lable = null;
         _transform = this.gameObject.GetComponent<Transform>();
         GetData();
