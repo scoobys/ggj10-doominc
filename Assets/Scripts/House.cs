@@ -11,7 +11,6 @@ public class House : MonoBehaviour {
 	public Quest[] quests;
 	public GameObject dialogBox;
 	public Text questText;
-	public Button template;
 
     // Use this for initialization
     void Start () {
@@ -59,23 +58,19 @@ public class House : MonoBehaviour {
 	
 		Quest quest = quests[0];
 		questText.text = quest.questText;
-		Button[] buttons = dialogBox.GetComponentsInChildren<Button>();
-		for (int i = 0; i < quest.resolutions.Length; i++)
+		Button[] buttons = dialogBox.GetComponentsInChildren<Button>(true);
+		Debug.Log("nuppe: " + buttons.Length);
+		for (int i = 0; i < buttons.Length; i++)
 		{
+			if (i >= quest.solutions.Length)
+			{
+				break;
+			}
 			Button b = buttons[i];
-			QuestResolution resolution = quest.resolutions[i];
-			b.GetComponentInChildren<Text>().text = resolution.action;
-			// b.gameObject.SetActive(true);
+			QuestSolution solution = quest.solutions[i];
+			b.GetComponentInChildren<Text>().text = solution.action;
+			b.gameObject.SetActive(true);
 		}
-		// foreach (QuestResolution q in quest.resolutions)
-		// {
-		// 	Debug.Log("Quest resolution " + q.action);
-		// 	Button button = Instantiate(template, dialogBox.transform, false);
-		// 	// button.transform.parent = dialogBox.transform;
-		// 	// button.transform.SetParent(dialogBox.transform, false);
-		// 	// Text buttonText = button.transform.GetChild(0);
-		// 	Debug.Log("Button enabled " + button.enabled);
-		// }
 	}
 }
 
@@ -83,13 +78,13 @@ public class House : MonoBehaviour {
 public struct Quest
 {
 	public string questText;
-	public QuestResolution[] resolutions;
+	public QuestSolution[] solutions;
 
 
 }
 
 [System.Serializable]
-public struct QuestResolution
+public struct QuestSolution
 {
 	public string action;
 	public float closerToDoom;
