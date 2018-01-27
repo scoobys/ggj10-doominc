@@ -164,6 +164,7 @@ public class House : MonoBehaviour {
                 b.onClick.AddListener(delegate { HandleOptionSelected(answer); });
                 b.gameObject.SetActive(true);
             }
+            Questions.Remove(question);
         }
 	}
 

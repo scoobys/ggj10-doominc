@@ -223,4 +223,9 @@
       </Question>
     </Questions>
   </House>
+  <House>
+    <Name>Brothel</Name>
+    <Questions>
+    </Questions>
+  </House>
 </ArrayOfHouse>
