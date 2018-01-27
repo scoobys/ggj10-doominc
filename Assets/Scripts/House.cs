@@ -33,13 +33,21 @@ public class House : MonoBehaviour {
     private ClockController _clock;
     private SkyController _skyController;
     private DateTime _lastClick;
+    private GameObject _questionPanel;
 
     // Use this for initialization
+
+     void Awake()
+    {
+        _questionPanel = GameObject.FindGameObjectWithTag("Question");
+    }
+
     void Start () {
         DialogBoxHolder dialogBoxHolder = transform.parent.gameObject.GetComponent<DialogBoxHolder>();
         dialogBox = dialogBoxHolder.dialogBox;
         questText = dialogBoxHolder.questText;
         questText.text = "";
+        _questionPanel.SetActive(false);
         _isMouseOver = false;
         _lable = null;
         Questions = new List<Question>();
@@ -52,7 +60,7 @@ public class House : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-	}
+    }
 
     private void OnMouseEnter()
     {
@@ -139,6 +147,7 @@ public class House : MonoBehaviour {
         {
             var question = Questions[0];
             dialogBox.SetActive(true);
+            _questionPanel.SetActive(true);
             questText.text = question.Name;
             Button[] buttons = dialogBox.GetComponentsInChildren<Button>(true);
             Debug.Log("nuppe: " + buttons.Length);
@@ -151,6 +160,7 @@ public class House : MonoBehaviour {
                 Button b = buttons[i];
                 var answer = question.Answers[i];
                 b.GetComponentInChildren<TextMeshProUGUI>().text = answer.Name; // nuppu tekst
+                b.onClick.RemoveAllListeners();
                 b.onClick.AddListener(delegate { HandleOptionSelected(answer); });
                 b.gameObject.SetActive(true);
             }
@@ -162,9 +172,10 @@ public class House : MonoBehaviour {
         if (DateTime.Now - _lastClick > new TimeSpan(0, 0, 0, 0, 500))
         {
             var random = new System.Random();
-            Debug.Log("Selected option " + selectedOption.Doom);
-            Debug.Log("Closer to doom by " + selectedOption.Name);
+            Debug.Log("Selected option " + selectedOption.Name);
+            Debug.Log("Closer to doom by " + selectedOption.Doom);
             dialogBox.SetActive(false);
+            _questionPanel.SetActive(false);
             Debug.Log(_clock.GetValue());
             _clock.SetValueOffset(selectedOption.Doom);
             Debug.Log(_clock.GetValue());
