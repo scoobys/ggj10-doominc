@@ -1,5 +1,9 @@
-﻿using System.Collections;
+﻿using Assets.Models;
+using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using System.Runtime.Serialization;
 using UnityEngine;
 using UnityEngine.UI;
 public class House : MonoBehaviour {
@@ -9,15 +13,45 @@ public class House : MonoBehaviour {
 	public Text questText;
 	public Button template;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		questText.text = "";
+        //GetData();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
 	}
+
+    //void GetData()
+    //{
+    //    var path = Application.dataPath + "/andmed2.xml";
+    //    Debug.Log(path);
+    //    if (File.Exists(path))
+    //    {
+    //        try
+    //        {
+    //            DataContractSerializer serializer = new DataContractSerializer(typeof(List<Assets.Models.House>), null,
+    //               0x7FFF /*maxItemsInObjectGraph*/,
+    //               false /*ignoreExtensionDataObject*/,
+    //               true /*preserveObjectReferences : this is where the magic happens */,
+    //               null /*dataContractSurrogate*/);
+
+    //            using (FileStream fs = File.Open(path, FileMode.Open))
+    //            {
+    //                var a = (List<Assets.Models.House>)serializer.ReadObject(fs);
+    //                a.ForEach(house => {
+    //                    Debug.Log(house.Name);
+    //                });
+    //            }
+    //        }
+    //        catch (Exception)
+    //        {
+    //            Debug.Log("Whoops");
+    //        }
+    //    }
+    //}
 
 	void OnMouseUp()
 	{
