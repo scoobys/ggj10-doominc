@@ -37,12 +37,7 @@ public class House : MonoBehaviour {
         dialogBox = dialogBoxHolder.dialogBox;
         questText = dialogBoxHolder.questText;
         questText.text = "";
-<<<<<<< HEAD
-=======
-
         _isMouseOver = false;
-        _highLightOpacity = 0;
->>>>>>> a70e0838cc6e63c4f20757ece77187606acff451
         _lable = null;
         _transform = this.gameObject.GetComponent<Transform>();
         GetData();
