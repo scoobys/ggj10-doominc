@@ -95,7 +95,6 @@ public class House : MonoBehaviour {
         _questionLable = new GameObject();
         _questionLable.AddComponent<SpriteRenderer>();
         _questionLable.transform.localScale = LableScale;
-        _questionLable.transform.position = new Vector3(0,5);
         var a = _questionLable.GetComponent<SpriteRenderer>();
         a.sprite = Lable;
         a.sortingLayerName = "Panels";
@@ -125,7 +124,6 @@ public class House : MonoBehaviour {
     {
 
         var path = Application.dataPath + "/coolio.xml";
-        Debug.Log(path);
         if (File.Exists(path))
         {
             try
@@ -136,13 +134,11 @@ public class House : MonoBehaviour {
                 {
                     a = (List<Assets.Models.House>)xs.Deserialize(sr);
                 }
-                Debug.Log(a.Count);
                 a.ForEach(house =>
                 {
                     if(house.Name == Name)
                     {
                         Questions = house.Questions;
-                        Debug.Log(house.Questions[0].Answers.Count);
                     }
                 });
             }
@@ -155,10 +151,10 @@ public class House : MonoBehaviour {
 
     void OnMouseUp()
 	{
-        if (Questions.Count > 0)
+        if (Questions.Count > 0 && !_questionPanel.activeSelf)
         {
             AddQuestionLable();
-            var question = Questions[0];
+            var question = Questions[UnityEngine.Random.Range(0,Questions.Count)];
             dialogBox.SetActive(true);
             _questionPanel.SetActive(true);
             questText.text = question.Name;
@@ -183,19 +179,16 @@ public class House : MonoBehaviour {
 
     void HandleOptionSelected(Answer selectedOption)
     {
-        Destroy(_questionLable);
         if (DateTime.Now - _lastClick > new TimeSpan(0, 0, 0, 0, 500))
         {
-            var random = new System.Random();
             Debug.Log("Selected option " + selectedOption.Name);
-            Debug.Log("Closer to doom by " + selectedOption.Doom);
+            Debug.Log("Closer to doom by " + selectedOption.Doom + "Current doom:" + _clock.GetValue());
             dialogBox.SetActive(false);
             _questionPanel.SetActive(false);
-            Debug.Log(_clock.GetValue());
             _clock.SetValueOffset(selectedOption.Doom);
-            Debug.Log(_clock.GetValue());
             _skyController.NextDay();
             _lastClick = DateTime.Now;
         }
+        Destroy(_questionLable);
     }
 }
