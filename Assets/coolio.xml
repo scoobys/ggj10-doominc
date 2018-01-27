@@ -39,6 +39,24 @@
         </Answers>
         <Trigers />
       </Question>
+      <Question>
+        <Name>Someone has stolen the cross</Name>
+        <Answers>
+          <Answer>
+            <Name>Search every house in the village for the cross.</Name>
+            <Doom>-2</Doom>
+          </Answer>
+          <Answer>
+            <Name>Give the church a new cross.</Name>
+            <Doom>4</Doom>
+          </Answer>
+          <Answer>
+            <Name>Tell them you took the cross.</Name>
+            <Doom>2</Doom>
+          </Answer>
+        </Answers>
+        <Trigers />
+      </Question>
     </Questions>
   </House>
   <House>
@@ -80,6 +98,60 @@
         </Answers>
         <Trigers />
       </Question>
+      <Question>
+        <Name>Intern wants you to try his experimental beer</Name>
+        <Answers>
+          <Answer>
+            <Name>Try it</Name>
+            <Doom>4</Doom>
+          </Answer>
+          <Answer>
+            <Name>Take it and give it to your wife.</Name>
+            <Doom>2</Doom>
+          </Answer>
+          <Answer>
+            <Name>Politely refuse</Name>
+            <Doom>0</Doom>
+          </Answer>
+        </Answers>
+        <Trigers />
+      </Question>
+      <Question>
+        <Name>The pub is burning!</Name>
+        <Answers>
+          <Answer>
+            <Name>Run to the exit, screaming.</Name>
+            <Doom>-1</Doom>
+          </Answer>
+          <Answer>
+            <Name>Doze the fire with your drink.</Name>
+            <Doom>1</Doom>
+          </Answer>
+          <Answer>
+            <Name>Relax and enjoy the warmth while everyone in the pub tries to extinguish the fire.</Name>
+            <Doom>3</Doom>
+          </Answer>
+        </Answers>
+        <Trigers />
+      </Question>
+      <Question>
+        <Name>The barman has passed out.</Name>
+        <Answers>
+          <Answer>
+            <Name>Take a free drink.</Name>
+            <Doom>0</Doom>
+          </Answer>
+          <Answer>
+            <Name>Throw a pucket of water at him.</Name>
+            <Doom>3</Doom>
+          </Answer>
+          <Answer>
+            <Name>Go to sleep besides him.</Name>
+            <Doom>1</Doom>
+          </Answer>
+        </Answers>
+        <Trigers />
+      </Question>
     </Questions>
   </House>
   <House>
@@ -117,6 +189,74 @@
           <Answer>
             <Name>Put a blanked over the body and tell the surrunding crowd that its under control.</Name>
             <Doom>-1</Doom>
+          </Answer>
+        </Answers>
+        <Trigers />
+      </Question>
+      <Question>
+        <Name>No one is at the market</Name>
+        <Answers>
+          <Answer>
+            <Name>You have always wanted to jump into the sardine barrel, now is your chance!</Name>
+            <Doom>-1</Doom>
+          </Answer>
+          <Answer>
+            <Name>Steal some sardines to bring to your wife.</Name>
+            <Doom>2</Doom>
+          </Answer>
+        </Answers>
+        <Trigers />
+      </Question>
+      <Question>
+        <Name>A big muscled warrior wants to fight you</Name>
+        <Answers>
+          <Answer>
+            <Name>Throw some leftover sand from you pockets at him and run.</Name>
+            <Doom>1</Doom>
+          </Answer>
+          <Answer>
+            <Name>Take up his challange like a man</Name>
+            <Doom>-2</Doom>
+          </Answer>
+          <Answer>
+            <Name>Release your hounds.</Name>
+            <Doom>-3</Doom>
+          </Answer>
+        </Answers>
+        <Trigers />
+      </Question>
+      <Question>
+        <Name>You see a thief stealing from a shop</Name>
+        <Answers>
+          <Answer>
+            <Name>Apprehend him and call for the guards.</Name>
+            <Doom>3</Doom>
+          </Answer>
+          <Answer>
+            <Name>Realise how easy it is to steal and try to steal some stuff as well.</Name>
+            <Doom>2</Doom>
+          </Answer>
+          <Answer>
+            <Name>Ignore the incident.</Name>
+            <Doom>-1</Doom>
+          </Answer>
+        </Answers>
+        <Trigers />
+      </Question>
+      <Question>
+        <Name>A wooden crate lies abandoned beside the street. It is inscribed with alien symbols.</Name>
+        <Answers>
+          <Answer>
+            <Name>Investigate it closer</Name>
+            <Doom>0</Doom>
+          </Answer>
+          <Answer>
+            <Name>Evacuate the street and call in a specialist</Name>
+            <Doom>3</Doom>
+          </Answer>
+          <Answer>
+            <Name>Take it home</Name>
+            <Doom>2</Doom>
           </Answer>
         </Answers>
         <Trigers />
@@ -221,11 +361,20 @@
         </Answers>
         <Trigers />
       </Question>
-    </Questions>
-  </House>
-  <House>
-    <Name>Brothel</Name>
-    <Questions>
+      <Question>
+        <Name>When you go to the alchemist tower, you see him in a trance and drawing spirals on the floor </Name>
+        <Answers>
+          <Answer>
+            <Name>Call for a doctor.</Name>
+            <Doom>1</Doom>
+          </Answer>
+          <Answer>
+            <Name>Just walk away.</Name>
+            <Doom>2</Doom>
+          </Answer>
+        </Answers>
+        <Trigers />
+      </Question>
     </Questions>
   </House>
 </ArrayOfHouse>
