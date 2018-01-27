@@ -41,3 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 3547429373
+    locked: 0
+  - name: Village
+    uniqueID: 1694344557
+    locked: 0
+  - name: New Layer
+    uniqueID: 4025362411
+    locked: 0
