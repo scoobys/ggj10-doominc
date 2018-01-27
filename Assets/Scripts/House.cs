@@ -8,11 +8,12 @@ using System.Xml.Serialization;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 public class House : MonoBehaviour {
 // päris
 	public Quest[] quests;
 	public GameObject dialogBox;
-	public Text questText;
+	public TextMeshProUGUI questText;
     public Sprite Lable;
     public Vector3 LablePosition;
 
@@ -28,7 +29,7 @@ public class House : MonoBehaviour {
     // Use this for initialization
     void Start () {
         _isMouseOver = false;
-		questText.text = "";
+        questText.text = "";
         _highLightOpacity = 0;
         _mask = null;
         _transform = this.gameObject.GetComponent<Transform>();
@@ -130,10 +131,18 @@ public class House : MonoBehaviour {
 			}
 			Button b = buttons[i];
 			QuestSolution solution = quest.solutions[i];
-			b.GetComponentInChildren<Text>().text = solution.action;
+			b.GetComponentInChildren<TextMeshProUGUI>().text = solution.action;
+            b.onClick.AddListener(delegate{HandleOptionSelected(solution);});
 			b.gameObject.SetActive(true);
 		}
 	}
+
+    void HandleOptionSelected(QuestSolution selectedOption)
+    {
+        Debug.Log("Selected option " + selectedOption.action);
+        Debug.Log("Closer to doom by " + selectedOption.closerToDoom);
+        dialogBox.SetActive(false);
+    }
 }
 
 [System.Serializable]
