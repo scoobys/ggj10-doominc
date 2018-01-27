@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ClockController : MonoBehaviour {
 
+    private float currentValue;
     private float targetDegrees;
 
     public float defaultValue;
@@ -40,9 +41,17 @@ public class ClockController : MonoBehaviour {
         gameObject.transform.localRotation = q;
     }
 
+    public float GetValue() {
+        return currentValue;
+    }
+
     public void SetValue(float val) {
-        float clampedVal = Mathf.Clamp(val, minValue, maxValue);
-        float valueFraction = (clampedVal - minValue) / (maxValue - minValue);
-        targetDegrees = -(offsetDegrees + minDegrees + (maxDegrees - minDegrees) * valueFraction);
+        currentValue = Mathf.Clamp(val, minValue, maxValue);
+        float valueFraction = (currentValue - minValue) / (maxValue - minValue);
+        targetDegrees = Mathf.Repeat(-(offsetDegrees + minDegrees + (maxDegrees - minDegrees) * valueFraction), 360f);
+    }
+
+    public void SetValueOffset(float offset) {
+        SetValue(currentValue + offset);
     }
 }
