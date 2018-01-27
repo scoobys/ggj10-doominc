@@ -14,13 +14,16 @@ public class House : MonoBehaviour {
 	public GameObject dialogBox;
 	public Text questText;
     public Sprite Lable;
+    public Sprite HighLight;
     public Vector3 LablePosition;
+    public Vector3 LableScale = new Vector3(0.5F, 0.5F);
 
     public float HighlightStep;
 
     private bool _isMouseOver;
     private float _highLightOpacity;
-    private GameObject _mask;
+    private GameObject _lable;
+    private GameObject _highlight;
     private Transform _transform;
 
 
@@ -30,9 +33,10 @@ public class House : MonoBehaviour {
         _isMouseOver = false;
 		questText.text = "";
         _highLightOpacity = 0;
-        _mask = null;
+        _lable = null;
         _transform = this.gameObject.GetComponent<Transform>();
         GetData();
+        AddHighlight();
     }
 	
 	// Update is called once per frame
@@ -42,21 +46,38 @@ public class House : MonoBehaviour {
 
     private void OnMouseEnter()
     {
-        var trans = _transform;
         _isMouseOver = true;
-        _mask = new GameObject();
-        _mask.AddComponent<SpriteRenderer>();
-        _mask.transform.localScale = new Vector3(0.5F, 0.5F);
-        _mask.transform.position = LablePosition;
-        var a = _mask.GetComponent<SpriteRenderer>();
-        a.sprite = Lable;
-        a.sortingLayerName = "New Layer";
+        Addlable();
     }
 
     private void OnMouseExit()
     {
         _isMouseOver = false;
-        Destroy(_mask);
+        Destroy(_lable);
+    }
+
+    private void Addlable()
+    {
+        _lable = new GameObject();
+        _lable.AddComponent<SpriteRenderer>();
+        _lable.transform.localScale = LableScale;
+        _lable.transform.position = LablePosition;
+        var a = _lable.GetComponent<SpriteRenderer>();
+        a.sprite = Lable;
+        a.sortingLayerName = "Lable";
+    }
+
+    private void AddHighlight()
+    {
+        _highlight = new GameObject();
+        _highlight.AddComponent<SpriteRenderer>();
+        _highlight.transform.position = _transform.position;
+        var a = _lable.GetComponent<SpriteRenderer>();
+        a.sprite = HighLight;
+        a.sortingLayerName = "Highlight";
+        var b = a.color;
+        _highLightOpacity = b.a;
+        _highLightOpacity = 0;
     }
 
 
