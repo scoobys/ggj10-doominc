@@ -19,6 +19,8 @@ public class House : MonoBehaviour {
     public Vector3 LablePosition;
     public Vector3 HighLightPosition;
     public Vector3 LableScale = new Vector3(0.5F, 0.5F);
+    public string Name;
+
 
     public AudioSource EnterSound;
 
@@ -29,8 +31,8 @@ public class House : MonoBehaviour {
     private GameObject _highlight;
     private Transform _transform;
     private ClockController _clock;
-    private GameObject _questionPanel;
     private SkyController _skyController;
+    private DateTime _lastClick;
 
     // Use this for initialization
     void Start () {
@@ -38,14 +40,14 @@ public class House : MonoBehaviour {
         dialogBox = dialogBoxHolder.dialogBox;
         questText = dialogBoxHolder.questText;
         questText.text = "";
-        _questionPanel = GameObject.FindGameObjectWithTag("Question");
         _isMouseOver = false;
         _lable = null;
-        Questions = new List<Question>() { new Question(),new Question(), new Question()};
+        Questions = new List<Question>();
         _transform = this.gameObject.GetComponent<Transform>();
         GetData();
         _clock = GameObject.FindGameObjectWithTag("Clock").GetComponent<ClockController>();
         _skyController = GameObject.FindGameObjectWithTag("Sky").GetComponent<SkyController>();
+        _lastClick = DateTime.Now;
     }
 
 	// Update is called once per frame
@@ -102,27 +104,12 @@ public class House : MonoBehaviour {
     void GetData()
     {
 
-        var path = Application.dataPath + "/data2.xml";
+        var path = Application.dataPath + "/coolio.xml";
         Debug.Log(path);
         if (File.Exists(path))
         {
             try
             {
-                //DataContractSerializer serializer = new DataContractSerializer(typeof(List<Assets.Models.House>), null,
-                //   0x7FFF /*maxItemsInObjectGraph*/,
-                //   false /*ignoreExtensionDataObject*/,
-                //   true /*preserveObjectReferences : this is where the magic happens */,
-                //   null /*dataContractSurrogate*/);
-
-                //using (FileStream fs = File.Open(path, FileMode.Open))
-                //{
-                //    var a = (List<Assets.Models.House>)serializer.ReadObject(fs);
-                //    Debug.Log(a.Count);
-                //    a.ForEach(house =>
-                //    {
-                //        Debug.Log(house.Name);
-                //    });
-                //}
                 var a = new List<Assets.Models.House>();
                 var xs = new XmlSerializer(typeof(List<Assets.Models.House>));
                 using (var sr = new StreamReader(path))
@@ -132,7 +119,11 @@ public class House : MonoBehaviour {
                 Debug.Log(a.Count);
                 a.ForEach(house =>
                 {
-                    Debug.Log(house.Name);
+                    if(house.Name == Name)
+                    {
+                        Questions = house.Questions;
+                        Debug.Log(house.Questions[0].Answers.Count);
+                    }
                 });
             }
             catch (Exception e)
@@ -144,36 +135,41 @@ public class House : MonoBehaviour {
 
     void OnMouseUp()
 	{
-        var question = Questions[0];
-        dialogBox.SetActive(true);
-        _questionPanel.SetActive(true);
-		questText.text = "Your Action:"; // Kysimus
-		Button[] buttons = dialogBox.GetComponentsInChildren<Button>(true);
-		Debug.Log("nuppe: " + buttons.Length);
-		for (int i = 0; i < buttons.Length; i++)
-		{
-			//if (i >= question.Answers.Count-1)
-			//{
-			//	break;
-			//}
-			Button b = buttons[i];
-			var answer = "placeholder";
-			b.GetComponentInChildren<TextMeshProUGUI>().text = answer; // nuppu tekst
-            b.onClick.AddListener(delegate{HandleOptionSelected(new Answer());});
-			b.gameObject.SetActive(true);
-		}
+        if (Questions.Count > 0)
+        {
+            var question = Questions[0];
+            dialogBox.SetActive(true);
+            questText.text = question.Name;
+            Button[] buttons = dialogBox.GetComponentsInChildren<Button>(true);
+            Debug.Log("nuppe: " + buttons.Length);
+            for (int i = 0; i < buttons.Length; i++)
+            {
+                if (i >= question.Answers.Count)
+                {
+                	break;
+                }
+                Button b = buttons[i];
+                var answer = question.Answers[i];
+                b.GetComponentInChildren<TextMeshProUGUI>().text = answer.Name; // nuppu tekst
+                b.onClick.AddListener(delegate { HandleOptionSelected(answer); });
+                b.gameObject.SetActive(true);
+            }
+        }
 	}
 
     void HandleOptionSelected(Answer selectedOption)
     {
-        var random = new System.Random();
-        //Debug.Log("Selected option " + selectedOption.action);
-        //Debug.Log("Closer to doom by " + selectedOption.closerToDoom);
-        dialogBox.SetActive(false);
-        _questionPanel.SetActive(false);
-        Debug.Log(_clock.GetValue());
-        _clock.SetValueOffset(0.5F);
-        Debug.Log(_clock.GetValue());
-        _skyController.NextDay();
+        if (DateTime.Now - _lastClick > new TimeSpan(0, 0, 0, 0, 500))
+        {
+            var random = new System.Random();
+            Debug.Log("Selected option " + selectedOption.Doom);
+            Debug.Log("Closer to doom by " + selectedOption.Name);
+            dialogBox.SetActive(false);
+            Debug.Log(_clock.GetValue());
+            _clock.SetValueOffset(selectedOption.Doom);
+            Debug.Log(_clock.GetValue());
+            _skyController.NextDay();
+            _lastClick = DateTime.Now;
+        }
     }
 }

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfHouse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <House>
+    <Name>Church</Name>
+    <Questions>
+      <Question>
+        <Name>Adoloscent kids are protestings at church door</Name>
+        <Answers>
+          <Answer>
+            <Name>Join the kids in protest, not knowing what they are protesting about</Name>
+            <Doom>2</Doom>
+          </Answer>
+          <Answer>
+            <Name>Use your political power to disperse the crowd</Name>
+            <Doom>1</Doom>
+          </Answer>
+          <Answer>
+            <Name>Release the priests</Name>
+            <Doom>-1</Doom>
+          </Answer>
+        </Answers>
+        <Trigers />
+      </Question>
+    </Questions>
+  </House>
+  <House>
+    <Name>Tavern</Name>
+    <Questions>
+      <Question>
+        <Name>Beer taps are empty!!</Name>
+        <Answers>
+          <Answer>
+            <Name>Fill them with holy water</Name>
+            <Doom>-1</Doom>
+          </Answer>
+          <Answer>
+            <Name>Fill them with unholy water</Name>
+            <Doom>1</Doom>
+          </Answer>
+          <Answer>
+            <Name>Fill them regular water</Name>
+            <Doom>-1</Doom>
+          </Answer>
+        </Answers>
+        <Trigers />
+      </Question>
+    </Questions>
+  </House>
+  <House>
+    <Name>Market</Name>
+    <Questions>
+      <Question>
+        <Name>The village joker is making an improv show</Name>
+        <Answers>
+          <Answer>
+            <Name>Boo him off the stage</Name>
+            <Doom>1</Doom>
+          </Answer>
+          <Answer>
+            <Name>Join the jokers show</Name>
+            <Doom>-1</Doom>
+          </Answer>
+          <Answer>
+            <Name>Get inspired and create your own impro show</Name>
+            <Doom>2</Doom>
+          </Answer>
+        </Answers>
+        <Trigers />
+      </Question>
+    </Questions>
+  </House>
+  <House>
+    <Name>Mayor Estate</Name>
+    <Questions>
+      <Question>
+        <Name>Your wife is angry. For some unknown reason.</Name>
+        <Answers>
+          <Answer>
+            <Name>Apologize.</Name>
+            <Doom>1</Doom>
+          </Answer>
+          <Answer>
+            <Name>Get rid of the cat</Name>
+            <Doom>1</Doom>
+          </Answer>
+          <Answer>
+            <Name>Try to make sense of her ramblings</Name>
+            <Doom>-2</Doom>
+          </Answer>
+        </Answers>
+        <Trigers />
+      </Question>
+    </Questions>
+  </House>
+  <House>
+    <Name>Alchemist Tower</Name>
+    <Questions>
+      <Question>
+        <Name>Alchemist offer you a potion to fix your most immediate problems</Name>
+        <Answers>
+          <Answer>
+            <Name>Take it! What could possibly go wrong.</Name>
+            <Doom>-1</Doom>
+          </Answer>
+          <Answer>
+            <Name>Dont take it</Name>
+            <Doom>-2</Doom>
+          </Answer>
+          <Answer>
+            <Name>Take it but dont use it.</Name>
+            <Doom>0</Doom>
+          </Answer>
+        </Answers>
+        <Trigers />
+      </Question>
+    </Questions>
+  </House>
+</ArrayOfHouse>
