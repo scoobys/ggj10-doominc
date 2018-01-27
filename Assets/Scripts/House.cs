@@ -5,50 +5,59 @@ using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization;
 using System.Xml.Serialization;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
-
 public class House : MonoBehaviour {
-    public Quest[] quests;
-    public GameObject dialogBox;
-    public TextMeshProUGUI questText;
-    public bool IsMouseOver;
+// päris
+	public Quest[] quests;
+	public GameObject dialogBox;
+	public Text questText;
+
     public float HighlightStep;
 
+    private bool _isMouseOver;
     private float _highLightOpacity;
 
+
+    
     // Use this for initialization
     void Start () {
-        IsMouseOver = false;
-        questText.text = "";
+        _isMouseOver = false;
+		questText.text = "";
         _highLightOpacity = 0;
-<<<<<<< HEAD
         GetData();
     }
 	
 	// Update is called once per frame
 	void Update () {
-		
+        Highlight();
 	}
-=======
-        //GetData();
-    }
->>>>>>> 6d8c3c9ee5b438a35376cd83860bc830339f1995
 
-    // Update is called once per frame
-    void Update () {
-
+    private void OnMouseEnter()
+    {
+        _isMouseOver = true;
     }
+
+    private void OnMouseExit()
+    {
+        _isMouseOver = false;
+    }
+
 
     void Highlight()
     {
-        if (IsMouseOver && _highLightOpacity < 1) _highLightOpacity += HighlightStep;
-        else if(!IsMouseOver && _highLightOpacity>0) _highLightOpacity -= HighlightStep;
+        if (_isMouseOver && _highLightOpacity < 1)
+        {
+            Debug.Log("highlighting");
+            _highLightOpacity += HighlightStep;
+        }
+        else if (!_isMouseOver && _highLightOpacity > 0) _highLightOpacity -= HighlightStep;
     }
 
     void GetData()
     {
+        
         var path = Application.dataPath + "/data2.xml";
         Debug.Log(path);
         if (File.Exists(path))
@@ -90,7 +99,6 @@ public class House : MonoBehaviour {
     }
 
     void OnMouseUp()
-<<<<<<< HEAD
 	{
 		dialogBox.SetActive(true);
 	
@@ -110,44 +118,13 @@ public class House : MonoBehaviour {
 			b.gameObject.SetActive(true);
 		}
 	}
-=======
-    {
-        Quest quest = quests[0];
-        Debug.Log("Quest text: " + quest.questText);
-
-        questText.text = quest.questText;
-        Debug.Log("Quest text field: " + questText.text);
-
-        Button[] buttons = dialogBox.GetComponentsInChildren<Button>(true);
-        Debug.Log("Buttons: " + buttons.Length);
-
-        for (int i = 0; i < buttons.Length; i++)
-        {
-            Debug.Log("Populating button: " + i);
-            if (i >= quest.solutions.Length)
-            {
-                Debug.Log("Too many solutions.");
-                break;
-            }
-
-            Button button = buttons[i];
-            QuestSolution solution = quest.solutions[i];
-            Debug.Log("Solution action: " + solution.action);
-            TextMeshProUGUI buttonText = button.GetComponentInChildren<TextMeshProUGUI>();
-            buttonText.text = solution.action;
-            button.gameObject.SetActive(true);
-        }
-
-        dialogBox.SetActive(true);
-    }
->>>>>>> 6d8c3c9ee5b438a35376cd83860bc830339f1995
 }
 
 [System.Serializable]
 public struct Quest
 {
-    public string questText;
-    public QuestSolution[] solutions;
+	public string questText;
+	public QuestSolution[] solutions;
 
 
 }
@@ -155,6 +132,6 @@ public struct Quest
 [System.Serializable]
 public struct QuestSolution
 {
-    public string action;
-    public float closerToDoom;
+	public string action;
+	public float closerToDoom;
 }
