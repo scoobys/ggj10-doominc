@@ -1833,9 +1833,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3cb865e4da084251b0860436441f582, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lable: {fileID: 21300000, guid: e83db405f5fee2b43a5feb51c12e5b8c, type: 3}
+  Lable: {fileID: 21300000, guid: c6160a3fde61511498eff331e816d20c, type: 3}
   HighLight: {fileID: 21300000, guid: fd0b15bfec48e9f458107afecb8766a1, type: 3}
-  LablePosition: {x: 0, y: 0, z: 0}
+  LablePosition: {x: -16.04, y: -3.19, z: 0}
   HighLightPosition: {x: -15.04, y: -3.19, z: 0}
   LableScale: {x: 0.5, y: 0.5, z: 0}
   Name: 
