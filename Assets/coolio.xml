@@ -21,6 +21,24 @@
         </Answers>
         <Trigers />
       </Question>
+      <Question>
+        <Name>The Raelian Movement come to you to offer their new trendy religion. For a fee.</Name>
+        <Answers>
+          <Answer>
+            <Name>You are a busy man and let your intern handel it.</Name>
+            <Doom>-3</Doom>
+          </Answer>
+          <Answer>
+            <Name>You welcome the new religion and rise taxes to pay for the fee.</Name>
+            <Doom>2</Doom>
+          </Answer>
+          <Answer>
+            <Name>You release the hounds</Name>
+            <Doom>1</Doom>
+          </Answer>
+        </Answers>
+        <Trigers />
+      </Question>
     </Questions>
   </House>
   <House>
@@ -40,6 +58,24 @@
           <Answer>
             <Name>Fill them regular water</Name>
             <Doom>-1</Doom>
+          </Answer>
+        </Answers>
+        <Trigers />
+      </Question>
+      <Question>
+        <Name>A random RPG party appears and asks if you have a quest</Name>
+        <Answers>
+          <Answer>
+            <Name>Tell them that there are rats in the cellar that need to be slain.</Name>
+            <Doom>1</Doom>
+          </Answer>
+          <Answer>
+            <Name>Tell them that a cult has built their headquarters in he city center.</Name>
+            <Doom>3</Doom>
+          </Answer>
+          <Answer>
+            <Name>Chase the roleplayers away</Name>
+            <Doom>-2</Doom>
           </Answer>
         </Answers>
         <Trigers />
@@ -67,6 +103,24 @@
         </Answers>
         <Trigers />
       </Question>
+      <Question>
+        <Name>A murder has happened</Name>
+        <Answers>
+          <Answer>
+            <Name>Blame the blood covered jester.</Name>
+            <Doom>1</Doom>
+          </Answer>
+          <Answer>
+            <Name>Celebrate it as a offering to the blood god</Name>
+            <Doom>2</Doom>
+          </Answer>
+          <Answer>
+            <Name>Put a blanked over the body and tell the surrunding crowd that its under control.</Name>
+            <Doom>-1</Doom>
+          </Answer>
+        </Answers>
+        <Trigers />
+      </Question>
     </Questions>
   </House>
   <House>
@@ -90,6 +144,24 @@
         </Answers>
         <Trigers />
       </Question>
+      <Question>
+        <Name>You receive a phone call from an unknown number</Name>
+        <Answers>
+          <Answer>
+            <Name>Buy whatever the telemarketer is selling</Name>
+            <Doom>-1</Doom>
+          </Answer>
+          <Answer>
+            <Name>File a harassment law suit against the caller</Name>
+            <Doom>3</Doom>
+          </Answer>
+          <Answer>
+            <Name>Throw your phone out of the window</Name>
+            <Doom>1</Doom>
+          </Answer>
+        </Answers>
+        <Trigers />
+      </Question>
     </Questions>
   </House>
   <House>
@@ -109,6 +181,42 @@
           <Answer>
             <Name>Take it but dont use it.</Name>
             <Doom>0</Doom>
+          </Answer>
+        </Answers>
+        <Trigers />
+      </Question>
+      <Question>
+        <Name>Alchemist is not at home, but theres a strange bottle at the doorstep</Name>
+        <Answers>
+          <Answer>
+            <Name>Open it</Name>
+            <Doom>2</Doom>
+          </Answer>
+          <Answer>
+            <Name>Give it to the priest</Name>
+            <Doom>-2</Doom>
+          </Answer>
+          <Answer>
+            <Name>Ignore it and go back to the tavern</Name>
+            <Doom>0</Doom>
+          </Answer>
+        </Answers>
+        <Trigers />
+      </Question>
+      <Question>
+        <Name>The alchemist searches for a missing air elementalist</Name>
+        <Answers>
+          <Answer>
+            <Name>Question the alchemists sanity and send him to the asylum for recovery.</Name>
+            <Doom>-1</Doom>
+          </Answer>
+          <Answer>
+            <Name>Help alchemist in his search</Name>
+            <Doom>-1</Doom>
+          </Answer>
+          <Answer>
+            <Name>Lie to the alchemist that you saw the elemetalist in the woods.</Name>
+            <Doom>4</Doom>
           </Answer>
         </Answers>
         <Trigers />
