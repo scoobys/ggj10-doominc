@@ -30,6 +30,7 @@ public class House : MonoBehaviour {
     private Transform _transform;
     private ClockController _clock;
     private GameObject _questionPanel;
+    private SkyController _skyController;
 
     // Use this for initialization
     void Start () {
@@ -44,9 +45,9 @@ public class House : MonoBehaviour {
         _transform = this.gameObject.GetComponent<Transform>();
         GetData();
         _clock = GameObject.FindGameObjectWithTag("Clock").GetComponent<ClockController>();
-
+        _skyController = GameObject.FindGameObjectWithTag("Sky").GetComponent<SkyController>();
     }
-	
+
 	// Update is called once per frame
 	void Update () {
 	}
@@ -100,7 +101,7 @@ public class House : MonoBehaviour {
 
     void GetData()
     {
-        
+
         var path = Application.dataPath + "/data2.xml";
         Debug.Log(path);
         if (File.Exists(path))
@@ -173,5 +174,6 @@ public class House : MonoBehaviour {
         Debug.Log(_clock.GetValue());
         _clock.SetValueOffset(0.5F);
         Debug.Log(_clock.GetValue());
+        _skyController.NextDay();
     }
 }
