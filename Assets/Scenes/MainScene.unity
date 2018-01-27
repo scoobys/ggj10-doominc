@@ -413,6 +413,8 @@ GameObject:
   m_Component:
   - component: {fileID: 136261322}
   - component: {fileID: 136261323}
+  - component: {fileID: 136261325}
+  - component: {fileID: 136261324}
   m_Layer: 0
   m_Name: Alchemist
   m_TagString: Untagged
@@ -477,6 +479,38 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &136261324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 136261321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3cb865e4da084251b0860436441f582, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quests: []
+  dialogBox: {fileID: 0}
+  questText: {fileID: 0}
+  Lable: {fileID: 21300000, guid: 860ad57d81be653499414e6e1dd0d24b, type: 3}
+  LablePosition: {x: 4.18, y: 4.18, z: 0}
+  HighlightStep: 0
+--- !u!70 &136261325
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 136261321}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.21140647, y: -0.35776424}
+  m_Size: {x: 2.296803, y: 5.714471}
+  m_Direction: 0
 --- !u!1 &357955330
 GameObject:
   m_ObjectHideFlags: 0
@@ -486,6 +520,8 @@ GameObject:
   m_Component:
   - component: {fileID: 357955331}
   - component: {fileID: 357955332}
+  - component: {fileID: 357955334}
+  - component: {fileID: 357955333}
   m_Layer: 0
   m_Name: Tavern
   m_TagString: Untagged
@@ -550,6 +586,38 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &357955333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 357955330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3cb865e4da084251b0860436441f582, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quests: []
+  dialogBox: {fileID: 0}
+  questText: {fileID: 0}
+  Lable: {fileID: 21300000, guid: f49489bfec1838147942e6b11918eafc, type: 3}
+  LablePosition: {x: 11.15, y: -5.72, z: 0}
+  HighlightStep: 0
+--- !u!70 &357955334
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 357955330}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.01653194, y: 0.049579628}
+  m_Size: {x: 8.941825, y: 4.445369}
+  m_Direction: 1
 --- !u!1 &568876448
 GameObject:
   m_ObjectHideFlags: 0
@@ -559,6 +627,8 @@ GameObject:
   m_Component:
   - component: {fileID: 568876449}
   - component: {fileID: 568876450}
+  - component: {fileID: 568876452}
+  - component: {fileID: 568876451}
   m_Layer: 0
   m_Name: Market
   m_TagString: Untagged
@@ -623,6 +693,38 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &568876451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 568876448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3cb865e4da084251b0860436441f582, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quests: []
+  dialogBox: {fileID: 0}
+  questText: {fileID: 0}
+  Lable: {fileID: 21300000, guid: 2da94d3fb1b230540835a70f7706f29f, type: 3}
+  LablePosition: {x: -10.15, y: -7.96, z: 0}
+  HighlightStep: 0
+--- !u!70 &568876452
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 568876448}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 12.33, y: 4.93}
+  m_Direction: 1
 --- !u!1001 &696241090
 Prefab:
   m_ObjectHideFlags: 0
@@ -1047,10 +1149,11 @@ MonoBehaviour:
       closerToDoom: -10
   dialogBox: {fileID: 135858603}
   questText: {fileID: 1384530750}
-  IsMouseOver: 0
-  HighlightStep: 0
---- !u!61 &1210520629
-BoxCollider2D:
+  Lable: {fileID: 21300000, guid: 98926613fe8469c488ea407a1026b5c6, type: 3}
+  LablePosition: {x: 0, y: 0, z: 0}
+  HighlightStep: 0.1
+--- !u!70 &1210520629
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -1061,19 +1164,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 12.02, y: 9.69}
-    newSize: {x: 0.16, y: 0.16}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.16}
-  m_EdgeRadius: 0
+  m_Offset: {x: -0.00000027714114, y: -2.3248286}
+  m_Size: {x: 12.020002, y: 5.040386}
+  m_Direction: 1
 --- !u!1001 &1250866724
 Prefab:
   m_ObjectHideFlags: 0
@@ -1271,6 +1364,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1533718272}
   - component: {fileID: 1533718273}
+  - component: {fileID: 1533718275}
+  - component: {fileID: 1533718274}
   m_Layer: 0
   m_Name: Brothel
   m_TagString: Untagged
@@ -1335,6 +1430,38 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &1533718274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1533718271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3cb865e4da084251b0860436441f582, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quests: []
+  dialogBox: {fileID: 0}
+  questText: {fileID: 0}
+  Lable: {fileID: 21300000, guid: e83db405f5fee2b43a5feb51c12e5b8c, type: 3}
+  LablePosition: {x: 0, y: 0, z: 0}
+  HighlightStep: 0
+--- !u!70 &1533718275
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1533718271}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.00000001744732, y: -0.14635874}
+  m_Size: {x: 6.380005, y: 3.290236}
+  m_Direction: 1
 --- !u!1001 &1595590297
 Prefab:
   m_ObjectHideFlags: 0
@@ -1756,6 +1883,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1991487786}
   - component: {fileID: 1991487787}
+  - component: {fileID: 1991487789}
+  - component: {fileID: 1991487788}
   m_Layer: 0
   m_Name: MajorEstate
   m_TagString: Untagged
@@ -1810,7 +1939,7 @@ SpriteRenderer:
   m_SortingLayerID: 1694344557
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f15ad90aeca8f454fb39fffb4c5ad505, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 092dd90a499ae27489e30f11d331ffb9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1820,6 +1949,38 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &1991487788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1991487785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3cb865e4da084251b0860436441f582, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quests: []
+  dialogBox: {fileID: 0}
+  questText: {fileID: 0}
+  Lable: {fileID: 21300000, guid: 4163962e536f83544936c272ba7a05ac, type: 3}
+  LablePosition: {x: 11.02, y: 2.71, z: 0}
+  HighlightStep: 0
+--- !u!70 &1991487789
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1991487785}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.1890965, y: -0.23885608}
+  m_Size: {x: 7.212328, y: 7.212328}
+  m_Direction: 1
 --- !u!1 &2002634627
 GameObject:
   m_ObjectHideFlags: 0

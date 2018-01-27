@@ -13,11 +13,15 @@ public class House : MonoBehaviour {
 	public Quest[] quests;
 	public GameObject dialogBox;
 	public Text questText;
+    public Sprite Lable;
+    public Vector3 LablePosition;
 
     public float HighlightStep;
 
     private bool _isMouseOver;
     private float _highLightOpacity;
+    private GameObject _mask;
+    private Transform _transform;
 
 
     
@@ -26,6 +30,8 @@ public class House : MonoBehaviour {
         _isMouseOver = false;
 		questText.text = "";
         _highLightOpacity = 0;
+        _mask = null;
+        _transform = this.gameObject.GetComponent<Transform>();
         GetData();
     }
 	
@@ -36,12 +42,21 @@ public class House : MonoBehaviour {
 
     private void OnMouseEnter()
     {
+        var trans = _transform;
         _isMouseOver = true;
+        _mask = new GameObject();
+        _mask.AddComponent<SpriteRenderer>();
+        _mask.transform.localScale = new Vector3(0.5F, 0.5F);
+        _mask.transform.position = LablePosition;
+        var a = _mask.GetComponent<SpriteRenderer>();
+        a.sprite = Lable;
+        a.sortingLayerName = "New Layer";
     }
 
     private void OnMouseExit()
     {
         _isMouseOver = false;
+        Destroy(_mask);
     }
 
 
@@ -53,6 +68,7 @@ public class House : MonoBehaviour {
             _highLightOpacity += HighlightStep;
         }
         else if (!_isMouseOver && _highLightOpacity > 0) _highLightOpacity -= HighlightStep;
+        var sprite = this.gameObject.GetComponent<SpriteRenderer>();
     }
 
     void GetData()
