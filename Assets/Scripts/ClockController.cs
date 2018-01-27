@@ -20,6 +20,7 @@ public class ClockController : MonoBehaviour {
 
     void Awake () {
         SetValue(defaultValue);
+        SetRotation(Quaternion.Euler(0f, 0f, targetDegrees));
     }
 
     void Update () {
@@ -32,7 +33,11 @@ public class ClockController : MonoBehaviour {
         //}
 
         Quaternion targetRotation = Quaternion.Euler(0f, 0f, targetDegrees);
-        gameObject.transform.localRotation = Quaternion.Lerp(gameObject.transform.localRotation, targetRotation, moveSpeed * Time.deltaTime);
+        SetRotation(Quaternion.Lerp(gameObject.transform.localRotation, targetRotation, moveSpeed * Time.deltaTime));
+    }
+
+    private void SetRotation(Quaternion q) {
+        gameObject.transform.localRotation = q;
     }
 
     public void SetValue(float val) {
