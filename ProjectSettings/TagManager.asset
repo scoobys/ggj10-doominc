@@ -50,3 +50,6 @@ TagManager:
   - name: New Layer
     uniqueID: 4025362411
     locked: 0
+  - name: Panels
+    uniqueID: 4063279085
+    locked: 0
