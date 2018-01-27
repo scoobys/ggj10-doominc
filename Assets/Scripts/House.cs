@@ -6,31 +6,29 @@ using System.IO;
 using System.Runtime.Serialization;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+
 public class House : MonoBehaviour {
-// päris
-	public Quest[] quests;
-	public GameObject dialogBox;
-	public Text questText;
+    public Quest[] quests;
+    public GameObject dialogBox;
+    public TextMeshProUGUI questText;
     public bool IsMouseOver;
     public float HighlightStep;
 
     private float _highLightOpacity;
 
-
-    
     // Use this for initialization
     void Start () {
         IsMouseOver = false;
-		questText.text = "";
+        questText.text = "";
         _highLightOpacity = 0;
         //GetData();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    }
 
+    // Update is called once per frame
+    void Update () {
+
+    }
 
     void Highlight()
     {
@@ -66,33 +64,43 @@ public class House : MonoBehaviour {
     //    }
     //}
 
-	void OnMouseUp()
-	{
-		dialogBox.SetActive(true);
-	
-		Quest quest = quests[0];
-		questText.text = quest.questText;
-		Button[] buttons = dialogBox.GetComponentsInChildren<Button>(true);
-		Debug.Log("nuppe: " + buttons.Length);
-		for (int i = 0; i < buttons.Length; i++)
-		{
-			if (i >= quest.solutions.Length)
-			{
-				break;
-			}
-			Button b = buttons[i];
-			QuestSolution solution = quest.solutions[i];
-			b.GetComponentInChildren<Text>().text = solution.action;
-			b.gameObject.SetActive(true);
-		}
-	}
+    void OnMouseUp()
+    {
+        Quest quest = quests[0];
+        Debug.Log("Quest text: " + quest.questText);
+
+        questText.text = quest.questText;
+        Debug.Log("Quest text field: " + questText.text);
+
+        Button[] buttons = dialogBox.GetComponentsInChildren<Button>(true);
+        Debug.Log("Buttons: " + buttons.Length);
+
+        for (int i = 0; i < buttons.Length; i++)
+        {
+            Debug.Log("Populating button: " + i);
+            if (i >= quest.solutions.Length)
+            {
+                Debug.Log("Too many solutions.");
+                break;
+            }
+
+            Button button = buttons[i];
+            QuestSolution solution = quest.solutions[i];
+            Debug.Log("Solution action: " + solution.action);
+            TextMeshProUGUI buttonText = button.GetComponentInChildren<TextMeshProUGUI>();
+            buttonText.text = solution.action;
+            button.gameObject.SetActive(true);
+        }
+
+        dialogBox.SetActive(true);
+    }
 }
 
 [System.Serializable]
 public struct Quest
 {
-	public string questText;
-	public QuestSolution[] solutions;
+    public string questText;
+    public QuestSolution[] solutions;
 
 
 }
@@ -100,6 +108,6 @@ public struct Quest
 [System.Serializable]
 public struct QuestSolution
 {
-	public string action;
-	public float closerToDoom;
+    public string action;
+    public float closerToDoom;
 }
