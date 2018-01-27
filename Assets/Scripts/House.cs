@@ -28,6 +28,7 @@ public class House : MonoBehaviour {
 
     private bool _isMouseOver;
     private GameObject _lable;
+    private GameObject _questionLable;
     private GameObject _highlight;
     private Transform _transform;
     private ClockController _clock;
@@ -89,6 +90,17 @@ public class House : MonoBehaviour {
         a.sortingLayerName = "Lable";
     }
 
+    private void AddQuestionLable()
+    {
+        _questionLable = new GameObject();
+        _questionLable.AddComponent<SpriteRenderer>();
+        _questionLable.transform.localScale = LableScale;
+        _questionLable.transform.position = new Vector3(0,5);
+        var a = _questionLable.GetComponent<SpriteRenderer>();
+        a.sprite = Lable;
+        a.sortingLayerName = "Panels";
+    }
+
     private void AddHighlight()
     {
         _highlight = new GameObject();
@@ -145,6 +157,7 @@ public class House : MonoBehaviour {
 	{
         if (Questions.Count > 0)
         {
+            AddQuestionLable();
             var question = Questions[0];
             dialogBox.SetActive(true);
             _questionPanel.SetActive(true);
@@ -170,6 +183,7 @@ public class House : MonoBehaviour {
 
     void HandleOptionSelected(Answer selectedOption)
     {
+        Destroy(_questionLable);
         if (DateTime.Now - _lastClick > new TimeSpan(0, 0, 0, 0, 500))
         {
             var random = new System.Random();
