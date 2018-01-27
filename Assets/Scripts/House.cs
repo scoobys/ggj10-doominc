@@ -11,10 +11,18 @@ public class House : MonoBehaviour {
 	public Quest[] quests;
 	public GameObject dialogBox;
 	public Text questText;
+    public bool IsMouseOver;
+    public float HighlightStep;
 
+    private float _highLightOpacity;
+
+
+    
     // Use this for initialization
     void Start () {
+        IsMouseOver = false;
 		questText.text = "";
+        _highLightOpacity = 0;
         //GetData();
 	}
 	
@@ -23,6 +31,12 @@ public class House : MonoBehaviour {
 		
 	}
 
+
+    void Highlight()
+    {
+        if (IsMouseOver && _highLightOpacity < 1) _highLightOpacity += HighlightStep;
+        else if(!IsMouseOver && _highLightOpacity>0) _highLightOpacity -= HighlightStep;
+    }
     //void GetData()
     //{
     //    var path = Application.dataPath + "/andmed2.xml";
