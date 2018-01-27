@@ -29,10 +29,15 @@ public class House : MonoBehaviour {
     private GameObject _highlight;
     private Transform _transform;
     private ClockController _clock;
+    private GameObject _questionPanel;
 
     // Use this for initialization
     void Start () {
-        dialogBox = GameObject.FindGameObjectWithTag("Question");
+        DialogBoxHolder dialogBoxHolder = transform.parent.gameObject.GetComponent<DialogBoxHolder>();
+        dialogBox = dialogBoxHolder.dialogBox;
+        questText = dialogBoxHolder.questText;
+        questText.text = "";
+        _questionPanel = GameObject.FindGameObjectWithTag("Question");
         _isMouseOver = false;
         _lable = null;
         Questions = new List<Question>() { new Question(),new Question(), new Question()};
@@ -139,7 +144,8 @@ public class House : MonoBehaviour {
     void OnMouseUp()
 	{
         var question = Questions[0];
-		dialogBox.SetActive(true);
+        dialogBox.SetActive(true);
+        _questionPanel.SetActive(true);
 		questText.text = "Your Action:"; // Kysimus
 		Button[] buttons = dialogBox.GetComponentsInChildren<Button>(true);
 		Debug.Log("nuppe: " + buttons.Length);
@@ -163,6 +169,7 @@ public class House : MonoBehaviour {
         //Debug.Log("Selected option " + selectedOption.action);
         //Debug.Log("Closer to doom by " + selectedOption.closerToDoom);
         dialogBox.SetActive(false);
+        _questionPanel.SetActive(false);
         Debug.Log(_clock.GetValue());
         _clock.SetValueOffset(0.5F);
         Debug.Log(_clock.GetValue());
