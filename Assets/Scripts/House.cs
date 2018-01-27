@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization;
+using System.Xml.Serialization;
 using UnityEngine;
 using UnityEngine.UI;
 public class House : MonoBehaviour {
@@ -23,8 +24,8 @@ public class House : MonoBehaviour {
         IsMouseOver = false;
 		questText.text = "";
         _highLightOpacity = 0;
-        //GetData();
-	}
+        GetData();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -37,36 +38,50 @@ public class House : MonoBehaviour {
         if (IsMouseOver && _highLightOpacity < 1) _highLightOpacity += HighlightStep;
         else if(!IsMouseOver && _highLightOpacity>0) _highLightOpacity -= HighlightStep;
     }
-    //void GetData()
-    //{
-    //    var path = Application.dataPath + "/andmed2.xml";
-    //    Debug.Log(path);
-    //    if (File.Exists(path))
-    //    {
-    //        try
-    //        {
-    //            DataContractSerializer serializer = new DataContractSerializer(typeof(List<Assets.Models.House>), null,
-    //               0x7FFF /*maxItemsInObjectGraph*/,
-    //               false /*ignoreExtensionDataObject*/,
-    //               true /*preserveObjectReferences : this is where the magic happens */,
-    //               null /*dataContractSurrogate*/);
 
-    //            using (FileStream fs = File.Open(path, FileMode.Open))
-    //            {
-    //                var a = (List<Assets.Models.House>)serializer.ReadObject(fs);
-    //                a.ForEach(house => {
-    //                    Debug.Log(house.Name);
-    //                });
-    //            }
-    //        }
-    //        catch (Exception)
-    //        {
-    //            Debug.Log("Whoops");
-    //        }
-    //    }
-    //}
+    void GetData()
+    {
+        var path = Application.dataPath + "/data2.xml";
+        Debug.Log(path);
+        if (File.Exists(path))
+        {
+            try
+            {
+                //DataContractSerializer serializer = new DataContractSerializer(typeof(List<Assets.Models.House>), null,
+                //   0x7FFF /*maxItemsInObjectGraph*/,
+                //   false /*ignoreExtensionDataObject*/,
+                //   true /*preserveObjectReferences : this is where the magic happens */,
+                //   null /*dataContractSurrogate*/);
 
-	void OnMouseUp()
+                //using (FileStream fs = File.Open(path, FileMode.Open))
+                //{
+                //    var a = (List<Assets.Models.House>)serializer.ReadObject(fs);
+                //    Debug.Log(a.Count);
+                //    a.ForEach(house =>
+                //    {
+                //        Debug.Log(house.Name);
+                //    });
+                //}
+                var a = new List<Assets.Models.House>();
+                var xs = new XmlSerializer(typeof(List<Assets.Models.House>));
+                using (var sr = new StreamReader(path))
+                {
+                    a = (List<Assets.Models.House>)xs.Deserialize(sr);
+                }
+                Debug.Log(a.Count);
+                a.ForEach(house =>
+                {
+                    Debug.Log(house.Name);
+                });
+            }
+            catch (Exception e)
+            {
+                Debug.Log(e);
+            }
+        }
+    }
+
+    void OnMouseUp()
 	{
 		dialogBox.SetActive(true);
 	
