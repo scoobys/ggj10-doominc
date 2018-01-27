@@ -18,6 +18,8 @@ public class House : MonoBehaviour {
     public Vector3 LablePosition;
     public Vector3 LableScale = new Vector3(0.5F, 0.5F);
 
+    public AudioSource EnterSound;
+
     public float HighlightStep;
 
     private bool _isMouseOver;
@@ -27,7 +29,7 @@ public class House : MonoBehaviour {
     private Transform _transform;
 
 
-    
+
     // Use this for initialization
     void Start () {
         _isMouseOver = false;
@@ -36,7 +38,7 @@ public class House : MonoBehaviour {
         _lable = null;
         _transform = this.gameObject.GetComponent<Transform>();
         GetData();
-        AddHighlight();
+        //AddHighlight();
     }
 	
 	// Update is called once per frame
@@ -47,6 +49,7 @@ public class House : MonoBehaviour {
     private void OnMouseEnter()
     {
         _isMouseOver = true;
+        EnterSound.Play();
         Addlable();
     }
 
