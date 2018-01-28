@@ -5,20 +5,34 @@ using TMPro;
 
 public class NewspaperController : MonoBehaviour {
 
-    Animator thisAnimator;
-    TextMeshProUGUI nameText;
-    TextMeshProUGUI headlineText;
+    private bool isOpen;
+    private Animator thisAnimator;
+    private TextMeshPro nameText;
+    private TextMeshPro headlineText;
+
+    // Debug stuff
+    private float nextUpdateTime = float.NegativeInfinity;
+    private float updateDelta = 5.0f;
 
     void Awake () {
         thisAnimator = GetComponent<Animator>();
-        Component[] components = GetComponentsInChildren(typeof(TextMeshProUGUI));
+        Component[] components = GetComponentsInChildren(typeof(TextMeshPro));
         foreach (Component c in components) {
             string name = c.gameObject.name;
             if (name == "Name") {
-                nameText = (TextMeshProUGUI) c;
+                nameText = (TextMeshPro) c;
             } else if (name == "Header") {
-                headlineText = (TextMeshProUGUI) c;
+                headlineText = (TextMeshPro) c;
             }
+        }
+        Close();
+    }
+
+    void Update() {
+        float t = Time.time;
+        if (nextUpdateTime < t) {
+            Open("Headline: " + t);
+            nextUpdateTime = t + updateDelta;
         }
     }
 
@@ -27,11 +41,19 @@ public class NewspaperController : MonoBehaviour {
     }
 
     public void Open(string headline) {
+        if (isOpen) {
+            return;
+        }
         headlineText.text = headline;
         thisAnimator.SetTrigger("Open");
+        isOpen = true;
     }
 
     public void Close() {
+        if (!isOpen) {
+            return;
+        }
+        isOpen = false;
         thisAnimator.SetTrigger("Close");
     }
 }
