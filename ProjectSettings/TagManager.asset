@@ -7,6 +7,7 @@ TagManager:
   - Clock
   - Sky
   - Question
+  - QuestionLable
   layers:
   - Default
   - TransparentFX
