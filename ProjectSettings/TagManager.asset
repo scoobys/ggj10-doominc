@@ -9,6 +9,7 @@ TagManager:
   - Question
   - QuestionLable
   - Newspaper
+  - Game
   layers:
   - Default
   - TransparentFX
