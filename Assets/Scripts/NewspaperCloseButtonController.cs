@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Assets.Scripts;
 
 public class NewspaperCloseButtonController : MonoBehaviour {
 
@@ -19,6 +20,6 @@ public class NewspaperCloseButtonController : MonoBehaviour {
 
     void OnMouseUp() {
         newspaperController.Close();
-        game.clickHouseEnabled = true;
+        game.ClearCurrentHouse();
     }
 }

@@ -85,6 +85,12 @@ public class Game : MonoBehaviour {
         }
     }
 
+    public void ClearCurrentHouse()
+    {
+        currentHouse = CurrentHouse.None;
+        clickHouseEnabled = true;
+    }
+
     public bool isAnyHouseSelected()
     {
         return currentHouse != CurrentHouse.None;
