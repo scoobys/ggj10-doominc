@@ -13,6 +13,7 @@ public class Game : MonoBehaviour {
 
     public string villageName = "Doom";
     public float newspaperOpenDelay = 3.0f;
+    public float transmissionOpenDuration = 5.0f;
     public bool clickHouseEnabled;
 
 	private TextAsset questData;
