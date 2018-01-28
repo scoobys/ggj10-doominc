@@ -15,6 +15,11 @@ public class ClockController : MonoBehaviour {
     public float maxDegrees;
     public float moveSpeed;
 
+    public float endIsNighValue;
+    public AudioSource doomPlus;
+    public AudioSource doomMinus;
+    public AudioSource endIsNigh;
+
     // Debug stuff
     //private float updateDelta = 3.0f;
     //private float nextUpdate = float.NegativeInfinity;
@@ -47,11 +52,30 @@ public class ClockController : MonoBehaviour {
 
     public void SetValue(float val) {
         currentValue = Mathf.Clamp(val, minValue, maxValue);
+        if (endIsNigh) {
+            if (currentValue <= endIsNighValue) {
+                endIsNigh.loop = true;
+                endIsNigh.Play();
+            } else {
+                endIsNigh.Stop();
+                endIsNigh.loop = false;
+            }
+        }
+
         float valueFraction = (currentValue - minValue) / (maxValue - minValue);
         targetDegrees = Mathf.Repeat(-(offsetDegrees + minDegrees + (maxDegrees - minDegrees) * valueFraction), 360f);
     }
 
     public void SetValueOffset(float offset) {
+        if (offset < 0f) {
+            if (doomMinus) {
+                doomMinus.Play();
+            }
+        } else {
+            if (doomPlus) {
+                doomPlus.Play();
+            }
+        }
         SetValue(currentValue + offset);
     }
 }
