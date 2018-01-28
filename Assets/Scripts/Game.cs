@@ -52,6 +52,14 @@ public class Game : MonoBehaviour {
 
     public List<Question> GetQuestions(string houseName)
     {
-        return houseToQuestions[houseName];
+        List<Question> questions;
+        if (houseToQuestions.TryGetValue(houseName, out questions))
+        {
+            return questions;
+        }
+        else
+        {
+            return new List<Question>();
+        }
     }
 }
