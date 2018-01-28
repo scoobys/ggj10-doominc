@@ -8,7 +8,7 @@
         <Answers>
           <Answer>
             <Name>Join the kids in protest, not knowing what they are protesting about</Name>
-            <News>Rabble rousers find get more organised as ever, nobody is safe!</News>
+            <News>Rabble rousers find a new leader and get more organised as ever. Nobody is safe!</News>
             <Doom>2</Doom>
           </Answer>
           <Answer>
@@ -18,7 +18,7 @@
           </Answer>
           <Answer>
             <Name>Release the priests</Name>
-            <News>Priest found while nobody even knew that he was missing.</News>
+            <News>Priest found that nobody knew was missing.</News>
             <Doom>-1</Doom>
           </Answer>
         </Answers>
@@ -28,18 +28,18 @@
         <Name>The Raelian Movement come to you to offer their new trendy religion. For a fee.</Name>
         <Answers>
           <Answer>
-            <Name>You are a busy man and let your intern handel it.</Name>
+            <Name>You are a busy man and let your intern handle it.</Name>
             <News>10 things that interns are perfect for, you wouldnt believe number 7!</News>
             <Doom>-3</Doom>
           </Answer>
           <Answer>
             <Name>You welcome the new religion and rise taxes to pay for the fee.</Name>
-            <News>New religion takes hold in the village, himan sacrafice rate higher than ever!</News>
+            <News>New religion takes hold in the village, human sacrifice rate higher than ever!</News>
             <Doom>2</Doom>
           </Answer>
           <Answer>
             <Name>You release the hounds</Name>
-            <News>Children playing pokemonGO found mauled in the ally, Mayor looking for the culprit.</News>
+            <News>Children playing pokemon GO found mauled in the alley, Mayor looking for the culprit.</News>
             <Doom>1</Doom>
           </Answer>
         </Answers>
@@ -50,7 +50,7 @@
         <Answers>
           <Answer>
             <Name>Search every house in the village for the cross.</Name>
-            <News>Community more united than ever, as the search for the cross continues.</News>
+            <News>Community more united than ever as the search for the cross continues.</News>
             <Doom>-2</Doom>
           </Answer>
           <Answer>
@@ -71,7 +71,7 @@
         <Answers>
           <Answer>
             <Name>Become the bride</Name>
-            <News>Same sex marriage a thing?? Critics say, maybe.</News>
+            <News>Same sex marriage a thing?? Critics say maybe.</News>
             <Doom>4</Doom>
           </Answer>
           <Answer>
@@ -81,7 +81,7 @@
           </Answer>
           <Answer>
             <Name>Blame the priest for losing the bride.</Name>
-            <News>The serial bride snatcher cought, bride population increasing.</News>
+            <News>The serial bride snatcher caught. Bride population increasing.</News>
             <Doom>-1</Doom>
           </Answer>
         </Answers>
@@ -118,16 +118,16 @@
         <Answers>
           <Answer>
             <Name>Tell them that there are rats in the cellar that need to be slain.</Name>
-            <News>PANIC! as a group of roleplayers found dead in a cellar.</News>
+            <News>PANIC! Group of roleplayers found dead in a cellar.</News>
             <Doom>1</Doom>
           </Answer>
           <Answer>
-            <Name>Tell them that a cult has built their headquarters in he city center.</Name>
-            <News>Nuns slaughterd as a grop of roleplayers mistake the monestary for the cult house.</News>
+            <Name>Tell them that a cult has built their headquarters in the city center.</Name>
+            <News>Nuns slaughterd as a group of roleplayers mistake the monestary for the cult house.</News>
             <Doom>3</Doom>
           </Answer>
           <Answer>
-            <Name>Chase the roleplayers away</Name>
+            <Name>Chase the roleplayers away.</Name>
             <News>New policy against role playing announced, effective immediately!</News>
             <Doom>-2</Doom>
           </Answer>
@@ -149,7 +149,7 @@
           </Answer>
           <Answer>
             <Name>Politely refuse</Name>
-            <News>People feel uneasy as nothing peculiar has happend.</News>
+            <News>People feel uneasy as nothing peculiar has happened.</News>
             <Doom>0</Doom>
           </Answer>
         </Answers>
@@ -160,7 +160,7 @@
         <Answers>
           <Answer>
             <Name>Run to the exit, screaming.</Name>
-            <News>Freak birthday accident, 12 dead, mayor only survivor.</News>
+            <News>Freak birthday accident. 12 dead, mayor the only survivor.</News>
             <Doom>-1</Doom>
           </Answer>
           <Answer>
@@ -186,7 +186,7 @@
           </Answer>
           <Answer>
             <Name>Throw a pucket of water at him.</Name>
-            <News>Water Bucket murdurer strikes again!</News>
+            <News>Water Bucket murderer strikes again!</News>
             <Doom>3</Doom>
           </Answer>
           <Answer>
@@ -212,11 +212,11 @@
           </Answer>
           <Answer>
             <Name>Join the jokers show</Name>
-            <News>Naked man interrups a impro show, the crowd was pleased.</News>
+            <News>Naked man interrups a improv show, the crowd was pleased.</News>
             <Doom>-1</Doom>
           </Answer>
           <Answer>
-            <Name>Get inspired and create your own impro show</Name>
+            <Name>Get inspired and create your own improv show</Name>
             <News>Freak improv show accident, 12 dead and 16 injured.</News>
             <Doom>2</Doom>
           </Answer>
@@ -228,7 +228,7 @@
         <Answers>
           <Answer>
             <Name>Blame the blood covered jester.</Name>
-            <News>Blood covered jester defend himself :"It was just a prank, bro."</News>
+            <News>Blood covered jester defends himself: "It was just a prank, bro."</News>
             <Doom>1</Doom>
           </Answer>
           <Answer>
@@ -254,7 +254,7 @@
           </Answer>
           <Answer>
             <Name>Dive in to the sardine barrel, naked. Nows your chance!</Name>
-            <News>top 10 weirdest bucketlist that you must read!</News>
+            <News>top 10 weirdest bucket lists that you must read!</News>
             <Doom>-1</Doom>
           </Answer>
           <Answer>
@@ -291,17 +291,17 @@
         <Answers>
           <Answer>
             <Name>Apprehend him and call for the guards.</Name>
-            <News>Public execution back in fashon, says experts.</News>
+            <News>Public execution back in fashion, experts say.</News>
             <Doom>3</Doom>
           </Answer>
           <Answer>
             <Name>Realise how easy it is to steal and try to steal some stuff as well.</Name>
-            <News>Kidnapping is on a all time high, nobody is safe says the experts.</News>
+            <News>Kidnapping is on an all time high, nobody is safe the experts say.</News>
             <Doom>2</Doom>
           </Answer>
           <Answer>
             <Name>Ignore the incident.</Name>
-            <News>Cursed artifacts gone missing also man spontaniously turned himself inside out.</News>
+            <News>Cursed artifacts gone missing, also a man spontaniously turned himself inside out.</News>
             <Doom>-1</Doom>
           </Answer>
         </Answers>
@@ -328,27 +328,6 @@
         </Answers>
         <Trigers />
       </Question>
-      <Question>
-        <Name>Your wife is angry. For some unknown reason.</Name>
-        <Answers>
-          <Answer>
-            <Name>Apologize.</Name>
-            <News>Accident at the manor as the mayor falls down the 2nd floor window and stabs himself several times.</News>
-            <Doom>1</Doom>
-          </Answer>
-          <Answer>
-            <Name>Get rid of the cat</Name>
-            <News>Crazy cat lady back to her senses, says "wont make that mistake again"</News>
-            <Doom>-1</Doom>
-          </Answer>
-          <Answer>
-            <Name>Try to make sense of her ramblings</Name>
-            <News>Terror at the manor! Woman claims housband left the seat up.</News>
-            <Doom>2</Doom>
-          </Answer>
-        </Answers>
-        <Trigers />
-      </Question>
     </Questions>
   </House>
   <House>
@@ -364,12 +343,12 @@
           </Answer>
           <Answer>
             <Name>Get rid of the cat</Name>
-            <News>Crazy cat lady back to her senses, says "wont make that mistake again"</News>
+            <News>Crazy cat lady back to her senses, says "wont make that mistake again".</News>
             <Doom>-1</Doom>
           </Answer>
           <Answer>
             <Name>Try to make sense of her ramblings</Name>
-            <News>Terror at the manor! Woman claims housband left the seat up.</News>
+            <News>Terror at the manor! Woman claims husband left the toilet seat up.</News>
             <Doom>2</Doom>
           </Answer>
         </Answers>
@@ -390,7 +369,7 @@
           </Answer>
           <Answer>
             <Name>Throw your phone out of the window</Name>
-            <News>Freak accident when a rouge phone kills a man.</News>
+            <News>Freak accident when a rogue phone kills a man.</News>
             <Doom>1</Doom>
           </Answer>
         </Answers>
@@ -406,12 +385,12 @@
           </Answer>
           <Answer>
             <Name>Wish for less doom</Name>
-            <News>Citizens rejoice as nothing worth mentioning happend.</News>
+            <News>Citizens rejoice as nothing worth mentioning happened today</News>
             <Doom>-1</Doom>
           </Answer>
           <Answer>
             <Name>Wish for more doom.</Name>
-            <News>Citizens confused as nothing happend but they feel more doomed than ever.</News>
+            <News>Citizens confused as nothing happened but they feel more doomed than ever.</News>
             <Doom>3</Doom>
           </Answer>
         </Answers>
@@ -444,7 +423,7 @@
     <Name>Alchemist Tower</Name>
     <Questions>
       <Question>
-        <Name>Alchemist offer you a potion to fix your most immediate problems</Name>
+        <Name>Alchemist offers you a potion to fix your most immediate problems</Name>
         <Answers>
           <Answer>
             <Name>Take it! What could possibly go wrong.</Name>
@@ -479,7 +458,7 @@
           </Answer>
           <Answer>
             <Name>Ignore it and go back to the tavern</Name>
-            <News>Drunk man pretends hes a pigeon, situation contained.</News>
+            <News>Drunk man pretends his a pigeon, situation contained.</News>
             <Doom>0</Doom>
           </Answer>
         </Answers>
@@ -511,7 +490,7 @@
         <Answers>
           <Answer>
             <Name>Try to help him.</Name>
-            <News>A simple game of twister gone wrong when a man lost the guide book.</News>
+            <News>A simple game of twister gone wrong when a man lost the guidebook.</News>
             <Doom>1</Doom>
           </Answer>
           <Answer>
