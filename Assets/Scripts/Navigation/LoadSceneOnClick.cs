@@ -15,7 +15,7 @@ public class LoadSceneOnClick : MonoBehaviour
     private void Awake()
     {
         _input = GameObject.FindGameObjectWithTag("Input").GetComponentInChildren<InputField>();
-        _global = GameObject.FindGameObjectWithTag("Global").GetComponentInChildren<Game>(); ;
+        _global = GameObject.FindGameObjectWithTag("Game").GetComponentInChildren<Game>();
 
     }
 
