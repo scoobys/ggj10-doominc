@@ -4,12 +4,15 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization;
-using System.Xml.Serialization;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 public class House : MonoBehaviour {
-    // päris
+
+    private Game game;
     public List<Question> Questions;
 	private GameObject dialogBox;
 	private TextMeshProUGUI questText;
@@ -38,6 +41,7 @@ public class House : MonoBehaviour {
 
      void Awake()
     {
+        game = GameObject.FindGameObjectWithTag("Game").GetComponent<Game>();
         _questionPanel = GameObject.FindGameObjectWithTag("Question");
     }
 
@@ -49,9 +53,8 @@ public class House : MonoBehaviour {
         _questionPanel.SetActive(false);
         _isMouseOver = false;
         _lable = null;
-        Questions = new List<Question>();
         _transform = this.gameObject.GetComponent<Transform>();
-        GetData();
+        Questions = game.GetQuestions(Name);
         _clock = GameObject.FindGameObjectWithTag("Clock").GetComponent<ClockController>();
         _skyController = GameObject.FindGameObjectWithTag("Sky").GetComponent<SkyController>();
         _lastClick = DateTime.Now;
@@ -116,43 +119,10 @@ public class House : MonoBehaviour {
         else if (!_isMouseOver && b.a > 0.01F) b.a -= HighlightStep;
     }
 
+
     void UnderlineText(TextMeshProUGUI text)
     {
         text.fontStyle = FontStyles.Underline;
-    }
-
-    void GetData()
-    {
-
-        var path = Application.dataPath + "/coolio.xml";
-        var assets = AssetBundle.GetAllLoadedAssetBundles();
-        foreach(AssetBundle asset in assets)
-        {
-            Debug.Log(asset);
-        }
-        if (File.Exists(path))
-        {
-            try
-            {
-                var a = new List<Assets.Models.House>();
-                var xs = new XmlSerializer(typeof(List<Assets.Models.House>));
-                using (var sr = new StreamReader(path))
-                {
-                    a = (List<Assets.Models.House>)xs.Deserialize(sr);
-                }
-                a.ForEach(house =>
-                {
-                    if(house.Name == Name)
-                    {
-                        Questions = house.Questions;
-                    }
-                });
-            }
-            catch (Exception e)
-            {
-                Debug.Log(e);
-            }
-        }
     }
 
     void OnMouseUp()

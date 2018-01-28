@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfHouse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <House>
+    <Name>Church</Name>
+    <Questions>
+      <Question>
+        <Name>Adoloscent kids are protestings at church door</Name>
+        <Answers>
+          <Answer>
+            <Name>Join the kids in protest, not knowing what they are protesting about</Name>
+            <Doom>2</Doom>
+          </Answer>
+          <Answer>
+            <Name>Use your political power to disperse the crowd</Name>
+            <Doom>1</Doom>
+          </Answer>
+          <Answer>
+            <Name>Release the priests</Name>
+            <Doom>-1</Doom>
+          </Answer>
+        </Answers>
+        <Trigers />
+      </Question>
+      <Question>
+        <Name>The Raelian Movement come to you to offer their new trendy religion. For a fee.</Name>
+        <Answers>
+          <Answer>
+            <Name>You are a busy man and let your intern handel it.</Name>
+            <Doom>-3</Doom>
+          </Answer>
+          <Answer>
+            <Name>You welcome the new religion and rise taxes to pay for the fee.</Name>
+            <Doom>2</Doom>
+          </Answer>
+          <Answer>
+            <Name>You release the hounds</Name>
+            <Doom>1</Doom>
+          </Answer>
+        </Answers>
+        <Trigers />
+      </Question>
+      <Question>
+        <Name>Someone has stolen the cross</Name>
+        <Answers>
+          <Answer>
+            <Name>Search every house in the village for the cross.</Name>
+            <Doom>-2</Doom>
+          </Answer>
+          <Answer>
+            <Name>Give the church a new cross.</Name>
+            <Doom>4</Doom>
+          </Answer>
+          <Answer>
+            <Name>Tell them you took the cross.</Name>
+            <Doom>2</Doom>
+          </Answer>
+        </Answers>
+        <Trigers />
+      </Question>
+    </Questions>
+  </House>
+  <House>
+    <Name>Tavern</Name>
+    <Questions>
+      <Question>
+        <Name>Beer taps are empty!!</Name>
+        <Answers>
+          <Answer>
+            <Name>Fill them with holy water</Name>
+            <Doom>-1</Doom>
+          </Answer>
+          <Answer>
+            <Name>Fill them with unholy water</Name>
+            <Doom>1</Doom>
+          </Answer>
+          <Answer>
+            <Name>Fill them regular water</Name>
+            <Doom>-1</Doom>
+          </Answer>
+        </Answers>
+        <Trigers />
+      </Question>
+      <Question>
+        <Name>A random RPG party appears and asks if you have a quest</Name>
+        <Answers>
+          <Answer>
+            <Name>Tell them that there are rats in the cellar that need to be slain.</Name>
+            <Doom>1</Doom>
+          </Answer>
+          <Answer>
+            <Name>Tell them that a cult has built their headquarters in he city center.</Name>
+            <Doom>3</Doom>
+          </Answer>
+          <Answer>
+            <Name>Chase the roleplayers away</Name>
+            <Doom>-2</Doom>
+          </Answer>
+        </Answers>
+        <Trigers />
+      </Question>
+      <Question>
+        <Name>Intern wants you to try his experimental beer</Name>
+        <Answers>
+          <Answer>
+            <Name>Try it</Name>
+            <Doom>4</Doom>
+          </Answer>
+          <Answer>
+            <Name>Take it and give it to your wife.</Name>
+            <Doom>2</Doom>
+          </Answer>
+          <Answer>
+            <Name>Politely refuse</Name>
+            <Doom>0</Doom>
+          </Answer>
+        </Answers>
+        <Trigers />
+      </Question>
+      <Question>
+        <Name>The pub is burning!</Name>
+        <Answers>
+          <Answer>
+            <Name>Run to the exit, screaming.</Name>
+            <Doom>-1</Doom>
+          </Answer>
+          <Answer>
+            <Name>Doze the fire with your drink.</Name>
+            <Doom>1</Doom>
+          </Answer>
+          <Answer>
+            <Name>Relax and enjoy the warmth while everyone in the pub tries to extinguish the fire.</Name>
+            <Doom>3</Doom>
+          </Answer>
+        </Answers>
+        <Trigers />
+      </Question>
+      <Question>
+        <Name>The barman has passed out.</Name>
+        <Answers>
+          <Answer>
+            <Name>Take a free drink.</Name>
+            <Doom>0</Doom>
+          </Answer>
+          <Answer>
+            <Name>Throw a pucket of water at him.</Name>
+            <Doom>3</Doom>
+          </Answer>
+          <Answer>
+            <Name>Go to sleep besides him.</Name>
+            <Doom>1</Doom>
+          </Answer>
+        </Answers>
+        <Trigers />
+      </Question>
+    </Questions>
+  </House>
+  <House>
+    <Name>Market</Name>
+    <Questions>
+      <Question>
+        <Name>The village joker is making an improv show</Name>
+        <Answers>
+          <Answer>
+            <Name>Boo him off the stage</Name>
+            <Doom>1</Doom>
+          </Answer>
+          <Answer>
+            <Name>Join the jokers show</Name>
+            <Doom>-1</Doom>
+          </Answer>
+          <Answer>
+            <Name>Get inspired and create your own impro show</Name>
+            <Doom>2</Doom>
+          </Answer>
+        </Answers>
+        <Trigers />
+      </Question>
+      <Question>
+        <Name>A murder has happened</Name>
+        <Answers>
+          <Answer>
+            <Name>Blame the blood covered jester.</Name>
+            <Doom>1</Doom>
+          </Answer>
+          <Answer>
+            <Name>Celebrate it as a offering to the blood god</Name>
+            <Doom>2</Doom>
+          </Answer>
+          <Answer>
+            <Name>Put a blanked over the body and tell the surrunding crowd that its under control.</Name>
+            <Doom>-1</Doom>
+          </Answer>
+        </Answers>
+        <Trigers />
+      </Question>
+      <Question>
+        <Name>No one is at the market</Name>
+        <Answers>
+          <Answer>
+            <Name>You have always wanted to jump into the sardine barrel, now is your chance!</Name>
+            <Doom>-1</Doom>
+          </Answer>
+          <Answer>
+            <Name>Steal some sardines to bring to your wife.</Name>
+            <Doom>2</Doom>
+          </Answer>
+        </Answers>
+        <Trigers />
+      </Question>
+      <Question>
+        <Name>A big muscled warrior wants to fight you</Name>
+        <Answers>
+          <Answer>
+            <Name>Throw some leftover sand from you pockets at him and run.</Name>
+            <Doom>1</Doom>
+          </Answer>
+          <Answer>
+            <Name>Take up his challange like a man</Name>
+            <Doom>-2</Doom>
+          </Answer>
+          <Answer>
+            <Name>Release your hounds.</Name>
+            <Doom>-3</Doom>
+          </Answer>
+        </Answers>
+        <Trigers />
+      </Question>
+      <Question>
+        <Name>You see a thief stealing from a shop</Name>
+        <Answers>
+          <Answer>
+            <Name>Apprehend him and call for the guards.</Name>
+            <Doom>3</Doom>
+          </Answer>
+          <Answer>
+            <Name>Realise how easy it is to steal and try to steal some stuff as well.</Name>
+            <Doom>2</Doom>
+          </Answer>
+          <Answer>
+            <Name>Ignore the incident.</Name>
+            <Doom>-1</Doom>
+          </Answer>
+        </Answers>
+        <Trigers />
+      </Question>
+      <Question>
+        <Name>A wooden crate lies abandoned beside the street. It is inscribed with alien symbols.</Name>
+        <Answers>
+          <Answer>
+            <Name>Investigate it closer</Name>
+            <Doom>0</Doom>
+          </Answer>
+          <Answer>
+            <Name>Evacuate the street and call in a specialist</Name>
+            <Doom>3</Doom>
+          </Answer>
+          <Answer>
+            <Name>Take it home</Name>
+            <Doom>2</Doom>
+          </Answer>
+        </Answers>
+        <Trigers />
+      </Question>
+    </Questions>
+  </House>
+  <House>
+    <Name>Mayor Estate</Name>
+    <Questions>
+      <Question>
+        <Name>Your wife is angry. For some unknown reason.</Name>
+        <Answers>
+          <Answer>
+            <Name>Apologize.</Name>
+            <Doom>1</Doom>
+          </Answer>
+          <Answer>
+            <Name>Get rid of the cat</Name>
+            <Doom>1</Doom>
+          </Answer>
+          <Answer>
+            <Name>Try to make sense of her ramblings</Name>
+            <Doom>-2</Doom>
+          </Answer>
+        </Answers>
+        <Trigers />
+      </Question>
+      <Question>
+        <Name>You receive a phone call from an unknown number</Name>
+        <Answers>
+          <Answer>
+            <Name>Buy whatever the telemarketer is selling</Name>
+            <Doom>-1</Doom>
+          </Answer>
+          <Answer>
+            <Name>File a harassment law suit against the caller</Name>
+            <Doom>3</Doom>
+          </Answer>
+          <Answer>
+            <Name>Throw your phone out of the window</Name>
+            <Doom>1</Doom>
+          </Answer>
+        </Answers>
+        <Trigers />
+      </Question>
+    </Questions>
+  </House>
+  <House>
+    <Name>Alchemist Tower</Name>
+    <Questions>
+      <Question>
+        <Name>Alchemist offer you a potion to fix your most immediate problems</Name>
+        <Answers>
+          <Answer>
+            <Name>Take it! What could possibly go wrong.</Name>
+            <Doom>-1</Doom>
+          </Answer>
+          <Answer>
+            <Name>Dont take it</Name>
+            <Doom>-2</Doom>
+          </Answer>
+          <Answer>
+            <Name>Take it but dont use it.</Name>
+            <Doom>0</Doom>
+          </Answer>
+        </Answers>
+        <Trigers />
+      </Question>
+      <Question>
+        <Name>Alchemist is not at home, but theres a strange bottle at the doorstep</Name>
+        <Answers>
+          <Answer>
+            <Name>Open it</Name>
+            <Doom>2</Doom>
+          </Answer>
+          <Answer>
+            <Name>Give it to the priest</Name>
+            <Doom>-2</Doom>
+          </Answer>
+          <Answer>
+            <Name>Ignore it and go back to the tavern</Name>
+            <Doom>0</Doom>
+          </Answer>
+        </Answers>
+        <Trigers />
+      </Question>
+      <Question>
+        <Name>The alchemist searches for a missing air elementalist</Name>
+        <Answers>
+          <Answer>
+            <Name>Question the alchemists sanity and send him to the asylum for recovery.</Name>
+            <Doom>-1</Doom>
+          </Answer>
+          <Answer>
+            <Name>Help alchemist in his search</Name>
+            <Doom>-1</Doom>
+          </Answer>
+          <Answer>
+            <Name>Lie to the alchemist that you saw the elemetalist in the woods.</Name>
+            <Doom>4</Doom>
+          </Answer>
+        </Answers>
+        <Trigers />
+      </Question>
+      <Question>
+        <Name>When you go to the alchemist tower, you see him in a trance and drawing spirals on the floor </Name>
+        <Answers>
+          <Answer>
+            <Name>Call for a doctor.</Name>
+            <Doom>1</Doom>
+          </Answer>
+          <Answer>
+            <Name>Just walk away.</Name>
+            <Doom>2</Doom>
+          </Answer>
+        </Answers>
+        <Trigers />
+      </Question>
+    </Questions>
+  </House>
+</ArrayOfHouse>

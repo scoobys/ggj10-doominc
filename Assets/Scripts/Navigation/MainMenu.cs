@@ -8,7 +8,6 @@ namespace Assets.Scripts.Navigation
 {
     public class MainMenu : MonoBehaviour
     {
-        private MenuState _state;
         private GameObject _main;
         private GameObject _credits;
         private GameObject _new;
@@ -19,27 +18,24 @@ namespace Assets.Scripts.Navigation
             _credits = GameObject.FindGameObjectWithTag("Credits");
             _new = GameObject.FindGameObjectWithTag("New");
         }
-
         public void Start()
         {
-            _state = MenuState.Main;
-            Navigate(_state);
+            Navigate(0);
         }
-
-        private void Navigate (MenuState newState)
+        public void Navigate (int newState)
         {
             _credits.SetActive(false);
             _main.SetActive(false);
             _new.SetActive(false);
             switch (newState)
             {
-                case MenuState.Main:
+                case (int)MenuState.Main:
                     _main.SetActive(true);
                     break;
-                case MenuState.New:
+                case (int)MenuState.New:
                     _new.SetActive(true);
                     break;
-                case MenuState.Credits:
+                case (int)MenuState.Credits:
                     _credits.SetActive(true);
                     break;
             }
