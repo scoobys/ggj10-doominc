@@ -12,6 +12,8 @@ public class Game : MonoBehaviour {
 
     public string villageName = "Doom";
 
+    public bool clickHouseEnabled;
+
 	private TextAsset questData;
     private Dictionary<string, List<Question>> houseToQuestions;
 
@@ -24,6 +26,7 @@ public class Game : MonoBehaviour {
         DontDestroyOnLoad(this.gameObject);
         houseToQuestions = new Dictionary<string, List<Question>>();
         InitQuestData();
+        clickHouseEnabled = true;
     }
 
     private void InitQuestData()

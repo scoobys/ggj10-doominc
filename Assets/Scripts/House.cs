@@ -39,7 +39,7 @@ public class House : MonoBehaviour {
 
     // Use this for initialization
 
-     void Awake()
+    void Awake()
     {
         game = GameObject.FindGameObjectWithTag("Game").GetComponent<Game>();
         _questionPanel = GameObject.FindGameObjectWithTag("Question");
@@ -127,6 +127,11 @@ public class House : MonoBehaviour {
 
     void OnMouseUp()
 	{
+        if (!game.clickHouseEnabled)
+        {
+            return;
+        }
+        game.clickHouseEnabled = false;
         if (Questions.Count > 0 && !_questionPanel.activeSelf)
         {
             var question = Questions[UnityEngine.Random.Range(0,Questions.Count)];
