@@ -15,6 +15,7 @@ using Assets.Scripts;
 public class House : MonoBehaviour {
 
     private Game game;
+    private GameEndController gameEndController;
     public List<Question> Questions;
 	private GameObject dialogBox;
 	private TextMeshProUGUI questText;
@@ -46,6 +47,7 @@ public class House : MonoBehaviour {
     void Awake()
     {
         game = GameObject.FindGameObjectWithTag("Game").GetComponent<Game>();
+        gameEndController = GameObject.FindGameObjectWithTag("GameEndPanel").GetComponent<GameEndController>();
         _questionPanel = GameObject.FindGameObjectWithTag("Question");
     }
 
@@ -73,7 +75,7 @@ public class House : MonoBehaviour {
     {
         _isMouseOver = true;
         if(EnterSound!=null && game.clickHouseEnabled)  EnterSound.Play();
-            Addlable();
+        if(game.clickHouseEnabled)Addlable();
         AddHighlight();
     }
 
@@ -175,9 +177,20 @@ public class House : MonoBehaviour {
             dialogBox.SetActive(false);
             _questionPanel.SetActive(false);
             _clock.SetValueOffset(selectedOption.Doom);
+            if (_clock.GetValue() >= 12f) {
+                gameEndController.Lose();
+                return;
+            }
+            if (game.dayNumber >= 7)
+            {
+                gameEndController.Win();
+                return;
+            }
             _skyController.NextDay(_clock.GetRelativeValue());
             _newspaperController.OpenDelayed(Game.instance.newspaperOpenDelay, (selectedOption.News != null ? selectedOption.News : "No news is good news"));
             _lastClick = DateTime.Now;
+            game.dayNumber += 1;
+            
         }
     }
 }

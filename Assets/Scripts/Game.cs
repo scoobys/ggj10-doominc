@@ -24,6 +24,8 @@ public class Game : MonoBehaviour {
     public AudioSource DefaultAmbient;
     private AudioSource _currAmbient;
 
+    public int dayNumber = 0;
+
     void Awake () {
         if (instance != null && instance != this) {
             Destroy(this.gameObject);

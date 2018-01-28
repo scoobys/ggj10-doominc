@@ -16,6 +16,9 @@ TagManager:
   - Global
   - Game
   - Tower
+  - GameEndPanel
+  - YouLose
+  - YouWin
   layers:
   - Default
   - TransparentFX
@@ -62,11 +65,11 @@ TagManager:
   - name: Village
     uniqueID: 1694344557
     locked: 0
-  - name: Lable
-    uniqueID: 4025362411
-    locked: 0
   - name: Hihlight
     uniqueID: 1480902503
+    locked: 0
+  - name: Lable
+    uniqueID: 4025362411
     locked: 0
   - name: Panels
     uniqueID: 4063279085
