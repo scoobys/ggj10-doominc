@@ -21,6 +21,9 @@ public class Game : MonoBehaviour {
 
     private CurrentHouse currentHouse;
 
+    public AudioSource DefaultAmbient;
+    private AudioSource _currAmbient;
+
     void Awake () {
         if (instance != null && instance != this) {
             Destroy(this.gameObject);
@@ -32,6 +35,18 @@ public class Game : MonoBehaviour {
         InitQuestData();
         clickHouseEnabled = true;
         currentHouse = CurrentHouse.None;
+    }
+
+    public void ChangeAmbient(AudioSource source)
+    {
+        if (source == null)
+        {
+            source = DefaultAmbient;
+        }
+        if (_currAmbient != null) _currAmbient.Stop();
+        source.loop = true;
+        source.Play();
+        _currAmbient = source;
     }
 
     private void InitQuestData()
@@ -74,7 +89,7 @@ public class Game : MonoBehaviour {
     public void SetCurrentHouse(House house)
     {
         currentHouse = house.CurrentHouse;
-        
+        ChangeAmbient(house.Ambient);
         if (currentHouse == CurrentHouse.None)
         {
             clickHouseEnabled = true;

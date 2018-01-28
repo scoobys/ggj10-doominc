@@ -22,11 +22,14 @@ public class ClockController : MonoBehaviour {
     public AudioSource endIsNigh;
     public AudioSource businessAsUsual;
 
+    private Game _global;
+
     // Debug stuff
     //private float updateDelta = 3.0f;
     //private float nextUpdate = float.NegativeInfinity;
 
     void Awake () {
+        _global = GameObject.FindGameObjectWithTag("Game").GetComponentInChildren<Game>();
         SetValue(defaultValue);
         SetRotation(Quaternion.Euler(0f, 0f, targetDegrees));
     }
@@ -55,23 +58,9 @@ public class ClockController : MonoBehaviour {
     public void SetValue(float val) {
         currentValue = Mathf.Clamp(val, minValue, maxValue);
         if (currentValue <= endIsNighValue) {
-            if (businessAsUsual) {
-                businessAsUsual.Stop();
-                businessAsUsual.loop = false;
-            }
-            if (endIsNigh) {
-                endIsNigh.loop = true;
-                endIsNigh.Play();
-            }
+            _global.ChangeAmbient(endIsNigh);
         } else {
-            if (businessAsUsual) {
-                businessAsUsual.loop = true;
-                businessAsUsual.Play();
-            }
-            if (endIsNigh) {
-                endIsNigh.Stop();
-                endIsNigh.loop = false;
-            }
+            _global.ChangeAmbient(businessAsUsual);
         }
 
         float valueFraction = (currentValue - minValue) / (maxValue - minValue);
