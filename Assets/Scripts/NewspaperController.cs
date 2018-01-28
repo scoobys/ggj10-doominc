@@ -41,6 +41,8 @@ public class NewspaperController : MonoBehaviour {
         if (isOpen) {
             return;
         }
+        Debug.Assert(Game.instance != null);
+        nameText.text = Game.instance.villageName + "Ville Times";
         headlineText.text = headline;
         thisAnimator.SetTrigger("Open");
         isOpen = true;
