@@ -54,4 +54,12 @@ public class ClockController : MonoBehaviour {
     public void SetValueOffset(float offset) {
         SetValue(currentValue + offset);
     }
+
+    public float GetRelativeValue()
+    {
+        Debug.Log("min doom " + minValue);
+        Debug.Log("max doom " + maxValue);
+        Debug.Log("relative doom " + (currentValue / maxValue));
+        return currentValue / maxValue;
+    }
 }

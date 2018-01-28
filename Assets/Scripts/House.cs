@@ -170,7 +170,7 @@ public class House : MonoBehaviour {
             dialogBox.SetActive(false);
             _questionPanel.SetActive(false);
             _clock.SetValueOffset(selectedOption.Doom);
-            _skyController.NextDay();
+            _skyController.NextDay(_clock.GetRelativeValue());
             _newspaperController.OpenDelayed(Game.instance.newspaperOpenDelay, (selectedOption.News != null ? selectedOption.News : "No news is good news"));
             _lastClick = DateTime.Now;
         }
