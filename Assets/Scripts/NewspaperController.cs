@@ -5,6 +5,9 @@ using TMPro;
 
 public class NewspaperController : MonoBehaviour {
 
+    public AudioSource EnterSound;
+    public AudioSource ExitSound;
+
     private bool isOpen;
     private Animator thisAnimator;
     private TextMeshPro nameText;
@@ -55,6 +58,7 @@ public class NewspaperController : MonoBehaviour {
         if (isOpen) {
             return;
         }
+        EnterSound.Play();
         Debug.Assert(Game.instance != null);
         nameText.text = Game.instance.villageName + "ville Times";
         headlineText.text = headline.ToUpper();
@@ -66,6 +70,7 @@ public class NewspaperController : MonoBehaviour {
         if (!isOpen) {
             return;
         }
+        ExitSound.Play();
         isOpen = false;
         thisAnimator.SetTrigger("Close");
     }
