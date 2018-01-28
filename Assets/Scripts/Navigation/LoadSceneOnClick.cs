@@ -14,15 +14,22 @@ public class LoadSceneOnClick : MonoBehaviour
 
     private void Awake()
     {
-        _input = GameObject.FindGameObjectWithTag("Input").GetComponentInChildren<InputField>();
-        _global = GameObject.FindGameObjectWithTag("Game").GetComponentInChildren<Game>();
+        try
+        {
+            _input = GameObject.FindGameObjectWithTag("Input").GetComponentInChildren<InputField>();
+            _global = GameObject.FindGameObjectWithTag("Game").GetComponentInChildren<Game>();
+        }
+        catch (Exception) { }
 
     }
 
     public void LoadByIndex(int sceneIndex)
     {
-        _global.villageName = _input.text;
-        Debug.Log(_global.villageName);
+        if (_global != null && _input != null)
+        {
+            _global.villageName = _input.text;
+            _global.clickHouseEnabled = true;
+        }
         SceneManager.LoadScene(sceneIndex);
     }
 }

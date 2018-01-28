@@ -75,7 +75,7 @@ public class House : MonoBehaviour {
     {
         _isMouseOver = true;
         if(EnterSound!=null && game.clickHouseEnabled)  EnterSound.Play();
-            Addlable();
+        if(game.clickHouseEnabled)Addlable();
         AddHighlight();
     }
 
@@ -181,14 +181,16 @@ public class House : MonoBehaviour {
                 gameEndController.Lose();
                 return;
             }
+            if (game.dayNumber >= 7)
+            {
+                gameEndController.Win();
+                return;
+            }
             _skyController.NextDay(_clock.GetRelativeValue());
             _newspaperController.OpenDelayed(Game.instance.newspaperOpenDelay, (selectedOption.News != null ? selectedOption.News : "No news is good news"));
             _lastClick = DateTime.Now;
             game.dayNumber += 1;
-            if (game.dayNumber >= 2) {
-                gameEndController.Win();
-                return;
-            }
+            
         }
     }
 }

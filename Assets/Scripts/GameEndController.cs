@@ -7,7 +7,6 @@ public class GameEndController : MonoBehaviour {
 
     private GameObject youWin;
     private GameObject youLose;
-    private GameObject startButton;
     private GameObject menuButton;
 
     void Awake () {
@@ -17,9 +16,7 @@ public class GameEndController : MonoBehaviour {
             Component[] components = GetComponentsInChildren(typeof(Button));
             foreach (Component c in components) {
                 string name = c.gameObject.name;
-                if (name == "StartGameButton") {
-                    startButton = c.gameObject;
-                } else if (name == "MainMenuButton") {
+                if (name == "MainMenuButton") {
                     menuButton = c.gameObject;
                 }
             }
@@ -31,7 +28,6 @@ public class GameEndController : MonoBehaviour {
     }
 
     void SetButtonsActive(bool active) {
-        startButton.SetActive(active);
         menuButton.SetActive(active);
     }
 
