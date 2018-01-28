@@ -1,5 +1,9 @@
-﻿using System.Collections;
+﻿using Assets.Models;
+using System.Collections;
 using System.Collections.Generic;
+using System;
+using System.IO;
+using System.Xml.Serialization;
 using UnityEngine;
 using TMPro;
 
@@ -7,5 +11,38 @@ public class DialogBoxHolder : MonoBehaviour {
 
 	public GameObject dialogBox;
 	public TextMeshProUGUI questText;
+	private TextAsset questData;
 
+
+	public List<Question> GetQuestions(string houseName)
+    {
+
+        questData = Resources.Load("questData") as TextAsset;
+        List<Question> Questions = new List<Question>();
+        {
+            try
+            {
+                var a = new List<Assets.Models.House>();
+                var xs = new XmlSerializer(typeof(List<Assets.Models.House>));
+                
+                // using (var sr = new StreamReader(path))
+                using (var sr = new StringReader(questData.text))
+                {
+                    a = (List<Assets.Models.House>)xs.Deserialize(sr);
+                }
+                a.ForEach(house =>
+                {
+                    if(house.Name == houseName)
+                    {
+                        Questions = house.Questions;
+                    }
+                });
+            }
+            catch (Exception e)
+            {
+                Debug.Log(e);
+            }
+        }
+        return Questions;
+    }
 }

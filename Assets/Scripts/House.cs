@@ -4,8 +4,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization;
-using System.Xml.Serialization;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -51,9 +52,8 @@ public class House : MonoBehaviour {
         _questionPanel.SetActive(false);
         _isMouseOver = false;
         _lable = null;
-        Questions = new List<Question>();
         _transform = this.gameObject.GetComponent<Transform>();
-        GetData();
+        Questions = dialogBoxHolder.GetQuestions(Name);
         _clock = GameObject.FindGameObjectWithTag("Clock").GetComponent<ClockController>();
         _skyController = GameObject.FindGameObjectWithTag("Sky").GetComponent<SkyController>();
         _lastClick = DateTime.Now;
@@ -116,35 +116,6 @@ public class House : MonoBehaviour {
         var b = a.color;
         if (_isMouseOver && b.a < 0.99F) b.a += HighlightStep;
         else if (!_isMouseOver && b.a > 0.01F) b.a -= HighlightStep;
-    }
-
-    void GetData()
-    {
-
-        var path = Application.dataPath + "/coolio.xml";
-        if (File.Exists(path))
-        {
-            try
-            {
-                var a = new List<Assets.Models.House>();
-                var xs = new XmlSerializer(typeof(List<Assets.Models.House>));
-                using (var sr = new StreamReader(path))
-                {
-                    a = (List<Assets.Models.House>)xs.Deserialize(sr);
-                }
-                a.ForEach(house =>
-                {
-                    if(house.Name == Name)
-                    {
-                        Questions = house.Questions;
-                    }
-                });
-            }
-            catch (Exception e)
-            {
-                Debug.Log(e);
-            }
-        }
     }
 
     void OnMouseUp()
