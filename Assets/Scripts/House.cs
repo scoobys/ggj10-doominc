@@ -118,6 +118,11 @@ public class House : MonoBehaviour {
         else if (!_isMouseOver && b.a > 0.01F) b.a -= HighlightStep;
     }
 
+    void UnderlineText(TextMeshProUGUI text)
+    {
+        text.fontStyle = FontStyles.Underline;
+    }
+
     void GetData()
     {
 
@@ -166,6 +171,8 @@ public class House : MonoBehaviour {
                 }
                 Button b = buttons[i];
                 var answer = question.Answers[i];
+                var tmp = b.GetComponentInChildren<TextMeshProUGUI>();
+                tmp.text = answer.Name;
                 b.GetComponentInChildren<TextMeshProUGUI>().text = answer.Name; // nuppu tekst
                 b.onClick.RemoveAllListeners();
                 b.onClick.AddListener(delegate { HandleOptionSelected(answer); });

@@ -173,7 +173,7 @@ Prefab:
     - target: {fileID: 224595546319645604, guid: 3ff97ac19217349669816ec8d8ca1a6b,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 400
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 224595546319645604, guid: 3ff97ac19217349669816ec8d8ca1a6b,
         type: 2}
@@ -213,12 +213,12 @@ Prefab:
     - target: {fileID: 114283486369599480, guid: 3ff97ac19217349669816ec8d8ca1a6b,
         type: 2}
       propertyPath: m_havePropertiesChanged
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114283486369599480, guid: 3ff97ac19217349669816ec8d8ca1a6b,
         type: 2}
       propertyPath: m_isInputParsingRequired
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1270094621237532, guid: 3ff97ac19217349669816ec8d8ca1a6b, type: 2}
       propertyPath: m_Name
@@ -309,7 +309,7 @@ Prefab:
     - target: {fileID: 114283486369599480, guid: 3ff97ac19217349669816ec8d8ca1a6b,
         type: 2}
       propertyPath: m_firstOverflowCharacterIndex
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 114605076483481792, guid: 3ff97ac19217349669816ec8d8ca1a6b,
         type: 2}
@@ -335,6 +335,11 @@ Prefab:
         type: 2}
       propertyPath: m_Colors.m_NormalColor.b
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114283486369599480, guid: 3ff97ac19217349669816ec8d8ca1a6b,
+        type: 2}
+      propertyPath: m_fontStyle
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114015821558131896, guid: 3ff97ac19217349669816ec8d8ca1a6b, type: 2}
@@ -1334,11 +1339,43 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1078261304}
+--- !u!1 &1094596828 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1270094621237532, guid: 3ff97ac19217349669816ec8d8ca1a6b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1245636824}
+--- !u!114 &1094596831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1094596828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd8f31ccbcf40c04085c570a9f9b30ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1153541282 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4082336097190754, guid: 06809a7ef2a4f4fa1893e3bc2be4d4d2,
     type: 2}
   m_PrefabInternal: {fileID: 590056756}
+--- !u!1 &1190380078 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1270094621237532, guid: 3ff97ac19217349669816ec8d8ca1a6b,
+    type: 2}
+  m_PrefabInternal: {fileID: 49654941}
+--- !u!114 &1190380079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1190380078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd8f31ccbcf40c04085c570a9f9b30ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1193183026
 GameObject:
   m_ObjectHideFlags: 0
@@ -1585,9 +1622,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Lable: {fileID: 21300000, guid: 98926613fe8469c488ea407a1026b5c6, type: 3}
-  HighLight: {fileID: 21300000, guid: 7fc5a19fe19cc014793715ac95406f9e, type: 3}
+  HighLight: {fileID: 21300000, guid: 76b637dcd89e08645aea8a085a8fb019, type: 3}
   LablePosition: {x: 0, y: 0, z: 0}
-  HighLightPosition: {x: 0, y: 0, z: 0}
+  HighLightPosition: {x: 2, y: 2, z: 0}
   LableScale: {x: 0.5, y: 0.5, z: 0}
   Name: Church
   EnterSound: {fileID: 1359909281}
@@ -1667,7 +1704,7 @@ Prefab:
     - target: {fileID: 224595546319645604, guid: 3ff97ac19217349669816ec8d8ca1a6b,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 400
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 224595546319645604, guid: 3ff97ac19217349669816ec8d8ca1a6b,
         type: 2}
@@ -2883,6 +2920,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1919639852 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1270094621237532, guid: 3ff97ac19217349669816ec8d8ca1a6b,
+    type: 2}
+  m_PrefabInternal: {fileID: 2139734996}
+--- !u!114 &1919639855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1919639852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd8f31ccbcf40c04085c570a9f9b30ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1991487785
 GameObject:
   m_ObjectHideFlags: 0
@@ -3100,7 +3153,7 @@ Prefab:
     - target: {fileID: 224595546319645604, guid: 3ff97ac19217349669816ec8d8ca1a6b,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 400
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 224595546319645604, guid: 3ff97ac19217349669816ec8d8ca1a6b,
         type: 2}
