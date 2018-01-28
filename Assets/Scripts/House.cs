@@ -132,7 +132,7 @@ public class House : MonoBehaviour {
 
     void OnMouseUp()
 	{
-        if (!game.clickHouseEnabled)
+        if (!game.clickHouseEnabled || Questions.Count<1)
         {
             return;
         }

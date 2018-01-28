@@ -58,9 +58,9 @@ public class ClockController : MonoBehaviour {
     public void SetValue(float val) {
         currentValue = Mathf.Clamp(val, minValue, maxValue);
         if (currentValue <= endIsNighValue) {
-            _global.ChangeAmbient(endIsNigh);
-        } else {
             _global.ChangeAmbient(businessAsUsual);
+        } else {
+            _global.ChangeAmbient(endIsNigh);
         }
 
         float valueFraction = (currentValue - minValue) / (maxValue - minValue);
