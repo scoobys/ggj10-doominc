@@ -35,6 +35,7 @@ public class Game : MonoBehaviour {
         InitQuestData();
         clickHouseEnabled = true;
         currentHouse = CurrentHouse.None;
+        ChangeAmbient(DefaultAmbient);
     }
 
     public void ChangeAmbient(AudioSource source)

@@ -21,6 +21,5 @@ public class NewspaperCloseButtonController : MonoBehaviour {
     void OnMouseUp() {
         newspaperController.Close();
         game.ClearCurrentHouse();
-        game.ChangeAmbient(null);
     }
 }

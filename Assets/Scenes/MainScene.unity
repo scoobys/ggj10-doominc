@@ -737,7 +737,7 @@ MonoBehaviour:
   Name: Alchemist Tower
   CurrentHouse: 5
   EnterSound: {fileID: 23981647}
-  Ambient: {fileID: 0}
+  Ambient: {fileID: 1306218741}
   HighlightStep: 0
 --- !u!70 &136261325
 CapsuleCollider2D:
@@ -1263,7 +1263,7 @@ MonoBehaviour:
   Name: Tavern
   CurrentHouse: 2
   EnterSound: {fileID: 1733752784}
-  Ambient: {fileID: 0}
+  Ambient: {fileID: 1015393236}
   HighlightStep: 0
 --- !u!70 &357955334
 CapsuleCollider2D:
@@ -1701,7 +1701,7 @@ MonoBehaviour:
   Name: Market
   CurrentHouse: 6
   EnterSound: {fileID: 1047947242}
-  Ambient: {fileID: 0}
+  Ambient: {fileID: 18430233}
   HighlightStep: 0
 --- !u!70 &568876452
 CapsuleCollider2D:
@@ -2091,10 +2091,10 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: a93c0bc712c1a364e9aefed2b5fba142, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -3032,7 +3032,7 @@ Prefab:
     - target: {fileID: 114651911332556516, guid: 88b3d919c1d0547cf8ed8f595941f440,
         type: 2}
       propertyPath: endIsNighValue
-      value: 3
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 114651911332556516, guid: 88b3d919c1d0547cf8ed8f595941f440,
         type: 2}
@@ -3136,7 +3136,7 @@ MonoBehaviour:
   Name: Church
   CurrentHouse: 1
   EnterSound: {fileID: 564238666}
-  Ambient: {fileID: 0}
+  Ambient: {fileID: 542810359}
   HighlightStep: 0.1
 --- !u!70 &1210520629
 CapsuleCollider2D:
@@ -3640,7 +3640,7 @@ MonoBehaviour:
   Name: Brothel
   CurrentHouse: 4
   EnterSound: {fileID: 147242211}
-  Ambient: {fileID: 0}
+  Ambient: {fileID: 542810359}
   HighlightStep: 0
 --- !u!70 &1533718275
 CapsuleCollider2D:
@@ -4941,7 +4941,7 @@ MonoBehaviour:
   Name: Mayor Estate
   CurrentHouse: 3
   EnterSound: {fileID: 185343292}
-  Ambient: {fileID: 0}
+  Ambient: {fileID: 1757674877}
   HighlightStep: 0
 --- !u!70 &1991487789
 CapsuleCollider2D:
@@ -5146,7 +5146,7 @@ MonoBehaviour:
   newspaperOpenDelay: 3
   transmissionOpenDuration: 5
   clickHouseEnabled: 0
-  DefaultAmbient: {fileID: 0}
+  DefaultAmbient: {fileID: 753414295}
 --- !u!4 &2031761145
 Transform:
   m_ObjectHideFlags: 0
