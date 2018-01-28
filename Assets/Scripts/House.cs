@@ -10,6 +10,8 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Assets.Scripts;
+
 public class House : MonoBehaviour {
 
     private Game game;
@@ -22,6 +24,7 @@ public class House : MonoBehaviour {
     public Vector3 HighLightPosition;
     public Vector3 LableScale = new Vector3(0.5F, 0.5F);
     public string Name;
+    public CurrentHouse CurrentHouse;
 
     public AudioSource EnterSound;
 
@@ -108,7 +111,7 @@ public class House : MonoBehaviour {
         if (HighLightPosition != new Vector3(0,0)) _highlight.transform.position = HighLightPosition;
         var a = _highlight.GetComponent<SpriteRenderer>();
         a.sprite = HighLight;
-        a.sortingLayerName = "Highlight";
+        a.sortingLayerName = "Hihlight";
     }
 
 
