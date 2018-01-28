@@ -8,14 +8,17 @@
         <Answers>
           <Answer>
             <Name>Join the kids in protest, not knowing what they are protesting about</Name>
+            <News>Rabble rousers find get more organised as ever, nobody is safe!</News>
             <Doom>2</Doom>
           </Answer>
           <Answer>
             <Name>Use your political power to disperse the crowd</Name>
+            <News>14 dead as the Mayor releases nerve gas to disperse a peaceful protest.</News>
             <Doom>1</Doom>
           </Answer>
           <Answer>
             <Name>Release the priests</Name>
+            <News>Priest found while nobody even knew that he was missing.</News>
             <Doom>-1</Doom>
           </Answer>
         </Answers>
@@ -26,14 +29,17 @@
         <Answers>
           <Answer>
             <Name>You are a busy man and let your intern handel it.</Name>
+            <News>10 things that interns are perfect for, you wouldnt believe number 7!</News>
             <Doom>-3</Doom>
           </Answer>
           <Answer>
             <Name>You welcome the new religion and rise taxes to pay for the fee.</Name>
+            <News>New religion takes hold in the village, himan sacrafice rate higher than ever!</News>
             <Doom>2</Doom>
           </Answer>
           <Answer>
             <Name>You release the hounds</Name>
+            <News>Children playing pokemonGO found mauled in the ally, Mayor looking for the culprit.</News>
             <Doom>1</Doom>
           </Answer>
         </Answers>
@@ -44,15 +50,39 @@
         <Answers>
           <Answer>
             <Name>Search every house in the village for the cross.</Name>
+            <News>Community more united than ever, as the search for the cross continues.</News>
             <Doom>-2</Doom>
           </Answer>
           <Answer>
             <Name>Give the church a new cross.</Name>
+            <News>Church furious as the new cross turned out to be made out of cheese.</News>
             <Doom>4</Doom>
           </Answer>
           <Answer>
             <Name>Tell them you took the cross.</Name>
+            <News>Kleptomania gone wrong! Find out more on page 8.</News>
             <Doom>2</Doom>
+          </Answer>
+        </Answers>
+        <Trigers />
+      </Question>
+      <Question>
+        <Name>A marriage has been canceled because the bride is missing</Name>
+        <Answers>
+          <Answer>
+            <Name>Become the bride</Name>
+            <News>Same sex marriage a thing?? Critics say, maybe.</News>
+            <Doom>4</Doom>
+          </Answer>
+          <Answer>
+            <Name>Offer your wife as a bride</Name>
+            <News>God is angry as polygamy becomes more popular than ever!</News>
+            <Doom>2</Doom>
+          </Answer>
+          <Answer>
+            <Name>Blame the priest for losing the bride.</Name>
+            <News>The serial bride snatcher cought, bride population increasing.</News>
+            <Doom>-1</Doom>
           </Answer>
         </Answers>
         <Trigers />
@@ -67,14 +97,17 @@
         <Answers>
           <Answer>
             <Name>Fill them with holy water</Name>
+            <News>Spontanious combustion spreads like a wildfire while the quality of life increases.</News>
             <Doom>-1</Doom>
           </Answer>
           <Answer>
             <Name>Fill them with unholy water</Name>
+            <News>Satanic metal more popular than ever, cause yet to be found.</News>
             <Doom>1</Doom>
           </Answer>
           <Answer>
             <Name>Fill them regular water</Name>
+            <News>The hangover epidemic cured! Turns out more booze was not the answer after all.</News>
             <Doom>-1</Doom>
           </Answer>
         </Answers>
@@ -85,14 +118,17 @@
         <Answers>
           <Answer>
             <Name>Tell them that there are rats in the cellar that need to be slain.</Name>
+            <News>PANIC! as a group of roleplayers found dead in a cellar.</News>
             <Doom>1</Doom>
           </Answer>
           <Answer>
             <Name>Tell them that a cult has built their headquarters in he city center.</Name>
+            <News>Nuns slaughterd as a grop of roleplayers mistake the monestary for the cult house.</News>
             <Doom>3</Doom>
           </Answer>
           <Answer>
             <Name>Chase the roleplayers away</Name>
+            <News>New policy against role playing announced, effective immediately!</News>
             <Doom>-2</Doom>
           </Answer>
         </Answers>
@@ -103,14 +139,17 @@
         <Answers>
           <Answer>
             <Name>Try it</Name>
+            <News>Man poisoned for drinking fermented leftovers.</News>
             <Doom>4</Doom>
           </Answer>
           <Answer>
             <Name>Take it and give it to your wife.</Name>
+            <News>Mayor accused for poisoning the wife!</News>
             <Doom>2</Doom>
           </Answer>
           <Answer>
             <Name>Politely refuse</Name>
+            <News>People feel uneasy as nothing peculiar has happend.</News>
             <Doom>0</Doom>
           </Answer>
         </Answers>
@@ -121,14 +160,17 @@
         <Answers>
           <Answer>
             <Name>Run to the exit, screaming.</Name>
+            <News>Freak birthday accident, 12 dead, mayor only survivor.</News>
             <Doom>-1</Doom>
           </Answer>
           <Answer>
             <Name>Doze the fire with your drink.</Name>
+            <News>Man tries to extinguish fire with ethanol, makes things worse.</News>
             <Doom>1</Doom>
           </Answer>
           <Answer>
             <Name>Relax and enjoy the warmth while everyone in the pub tries to extinguish the fire.</Name>
+            <News>10 facts about why a burning bar is not a sauna. Find out more on page 12.</News>
             <Doom>3</Doom>
           </Answer>
         </Answers>
@@ -139,14 +181,17 @@
         <Answers>
           <Answer>
             <Name>Take a free drink.</Name>
+            <News>Religous man running through the streets naked, gets ignored by everybody.</News>
             <Doom>0</Doom>
           </Answer>
           <Answer>
             <Name>Throw a pucket of water at him.</Name>
+            <News>Water Bucket murdurer strikes again!</News>
             <Doom>3</Doom>
           </Answer>
           <Answer>
             <Name>Go to sleep besides him.</Name>
+            <News />
             <Doom>1</Doom>
           </Answer>
         </Answers>
@@ -162,14 +207,17 @@
         <Answers>
           <Answer>
             <Name>Boo him off the stage</Name>
+            <News>Have improv shows gone too far? God says, yes!</News>
             <Doom>1</Doom>
           </Answer>
           <Answer>
             <Name>Join the jokers show</Name>
+            <News>Naked man interrups a impro show, the crowd was pleased.</News>
             <Doom>-1</Doom>
           </Answer>
           <Answer>
             <Name>Get inspired and create your own impro show</Name>
+            <News>Freak improv show accident, 12 dead and 16 injured.</News>
             <Doom>2</Doom>
           </Answer>
         </Answers>
@@ -180,14 +228,17 @@
         <Answers>
           <Answer>
             <Name>Blame the blood covered jester.</Name>
+            <News>Blood covered jester defend himself :"It was just a prank, bro."</News>
             <Doom>1</Doom>
           </Answer>
           <Answer>
             <Name>Celebrate it as a offering to the blood god</Name>
+            <News>Market closed as the blood god makes an appearence after 10 years.</News>
             <Doom>2</Doom>
           </Answer>
           <Answer>
             <Name>Put a blanked over the body and tell the surrunding crowd that its under control.</Name>
+            <News>People amazed as a body is coverd with a blanket, business as usual.</News>
             <Doom>-1</Doom>
           </Answer>
         </Answers>
@@ -197,12 +248,19 @@
         <Name>No one is at the market</Name>
         <Answers>
           <Answer>
-            <Name>You have always wanted to jump into the sardine barrel, now is your chance!</Name>
+            <Name>Steal some sardines to bring to your wife.</Name>
+            <News>Citizens confused as something fishy is happening at the manor.</News>
+            <Doom>2</Doom>
+          </Answer>
+          <Answer>
+            <Name>Dive in to the sardine barrel, naked. Nows your chance!</Name>
+            <News>top 10 weirdest bucketlist that you must read!</News>
             <Doom>-1</Doom>
           </Answer>
           <Answer>
-            <Name>Steal some sardines to bring to your wife.</Name>
-            <Doom>2</Doom>
+            <Name>Go back home.</Name>
+            <News>Yearly purge yields no casualties.</News>
+            <Doom>0</Doom>
           </Answer>
         </Answers>
         <Trigers />
@@ -212,15 +270,18 @@
         <Answers>
           <Answer>
             <Name>Throw some leftover sand from you pockets at him and run.</Name>
+            <News>Sand related deaths skyrocket, scientist blame global warming.</News>
             <Doom>1</Doom>
           </Answer>
           <Answer>
             <Name>Take up his challange like a man</Name>
+            <News>Man brings gun to a fist fight, it was super effective!</News>
             <Doom>-2</Doom>
           </Answer>
           <Answer>
             <Name>Release your hounds.</Name>
-            <Doom>-3</Doom>
+            <News>12 Dead when the market was overrun by hounds.</News>
+            <Doom>3</Doom>
           </Answer>
         </Answers>
         <Trigers />
@@ -230,14 +291,17 @@
         <Answers>
           <Answer>
             <Name>Apprehend him and call for the guards.</Name>
+            <News>Public execution back in fashon, says experts.</News>
             <Doom>3</Doom>
           </Answer>
           <Answer>
             <Name>Realise how easy it is to steal and try to steal some stuff as well.</Name>
+            <News>Kidnapping is on a all time high, nobody is safe says the experts.</News>
             <Doom>2</Doom>
           </Answer>
           <Answer>
             <Name>Ignore the incident.</Name>
+            <News>Cursed artifacts gone missing also man spontaniously turned himself inside out.</News>
             <Doom>-1</Doom>
           </Answer>
         </Answers>
@@ -248,14 +312,17 @@
         <Answers>
           <Answer>
             <Name>Investigate it closer</Name>
+            <News>Worst handwriting in history discovered.</News>
             <Doom>0</Doom>
           </Answer>
           <Answer>
             <Name>Evacuate the street and call in a specialist</Name>
+            <News>Military deployed in the market as man confused upside down crate for a alien artifact.  4 dead.</News>
             <Doom>3</Doom>
           </Answer>
           <Answer>
             <Name>Take it home</Name>
+            <News>New art installment gone missing! Guards say it was there before lunch.</News>
             <Doom>2</Doom>
           </Answer>
         </Answers>
@@ -271,15 +338,18 @@
         <Answers>
           <Answer>
             <Name>Apologize.</Name>
+            <News>Accident at the manor as the mayor falls down the 2nd floor window and stabs himself several times.</News>
             <Doom>1</Doom>
           </Answer>
           <Answer>
             <Name>Get rid of the cat</Name>
-            <Doom>1</Doom>
+            <News>Crazy cat lady back to her senses, says "wont make that mistake again"</News>
+            <Doom>-1</Doom>
           </Answer>
           <Answer>
             <Name>Try to make sense of her ramblings</Name>
-            <Doom>-2</Doom>
+            <News>Terror at the manor! Woman claims housband left the seat up.</News>
+            <Doom>2</Doom>
           </Answer>
         </Answers>
         <Trigers />
@@ -298,6 +368,48 @@
           <Answer>
             <Name>Throw your phone out of the window</Name>
             <Doom>1</Doom>
+          </Answer>
+        </Answers>
+        <Trigers />
+      </Question>
+      <Question>
+        <Name>You do some gardening and find a small wishing gnome</Name>
+        <Answers>
+          <Answer>
+            <Name>Wish for more wishing gnomes.</Name>
+            <News>Man dies as wishing gnome population increases.</News>
+            <Doom>2</Doom>
+          </Answer>
+          <Answer>
+            <Name>Wish for less doom</Name>
+            <News>Citizens rejoice as nothing worth mentioning happend.</News>
+            <Doom>-1</Doom>
+          </Answer>
+          <Answer>
+            <Name>Wish for more doom.</Name>
+            <News>Citizens confused as nothing happend but they feel more doomed than ever.</News>
+            <Doom>3</Doom>
+          </Answer>
+        </Answers>
+        <Trigers />
+      </Question>
+      <Question>
+        <Name>Your maid did not come to work today.You have to clean the house by yourself.</Name>
+        <Answers>
+          <Answer>
+            <Name>Start cleaning the house</Name>
+            <News>Lynching continues and no mayor is to be found.</News>
+            <Doom>1</Doom>
+          </Answer>
+          <Answer>
+            <Name>Tell your wife to clean the house.</Name>
+            <News>Terror at the manor! Mayor suffers major injuries.</News>
+            <Doom>2</Doom>
+          </Answer>
+          <Answer>
+            <Name>Go look for the maid.</Name>
+            <News>Heroic rescue as maid got her hand stuck in jar was saved.</News>
+            <Doom>-1</Doom>
           </Answer>
         </Answers>
         <Trigers />
