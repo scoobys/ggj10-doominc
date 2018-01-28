@@ -125,6 +125,11 @@ public class House : MonoBehaviour {
     {
 
         var path = Application.dataPath + "/coolio.xml";
+        var assets = AssetBundle.GetAllLoadedAssetBundles();
+        foreach(AssetBundle asset in assets)
+        {
+            Debug.Log(asset);
+        }
         if (File.Exists(path))
         {
             try

@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
  public class LoadSceneOnClick : MonoBehaviour
 {
+    public int TargetIndex;
 
     public void LoadByIndex(int sceneIndex)
     {
