@@ -12,8 +12,9 @@ public class Game : MonoBehaviour {
 
     public string villageName = "Doom";
     public float newspaperOpenDelay = 3.0f;
+    public bool clickHouseEnabled;
 
-    private TextAsset questData;
+	private TextAsset questData;
     private Dictionary<string, List<Question>> houseToQuestions;
 
     void Awake () {
@@ -25,6 +26,7 @@ public class Game : MonoBehaviour {
         DontDestroyOnLoad(this.gameObject);
         houseToQuestions = new Dictionary<string, List<Question>>();
         InitQuestData();
+        clickHouseEnabled = true;
     }
 
     private void InitQuestData()
