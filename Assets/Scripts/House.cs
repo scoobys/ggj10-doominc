@@ -135,7 +135,8 @@ public class House : MonoBehaviour {
         {
             return;
         }
-        game.clickHouseEnabled = false;
+        game.SetCurrentHouse(CurrentHouse);
+        // game.clickHouseEnabled = false;
         if (Questions.Count > 0 && !_questionPanel.activeSelf)
         {
             var question = Questions[UnityEngine.Random.Range(0,Questions.Count)];
