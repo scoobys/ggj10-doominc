@@ -5,6 +5,7 @@ using System.IO;
 using System;
 using System.Xml.Serialization;
 using UnityEngine;
+using Assets.Scripts;
 
 public class Game : MonoBehaviour {
 
@@ -17,6 +18,8 @@ public class Game : MonoBehaviour {
 	private TextAsset questData;
     private Dictionary<string, List<Question>> houseToQuestions;
 
+    private CurrentHouse currentHouse;
+
     void Awake () {
         if (instance != null && instance != this) {
             Destroy(this.gameObject);
@@ -27,6 +30,7 @@ public class Game : MonoBehaviour {
         houseToQuestions = new Dictionary<string, List<Question>>();
         InitQuestData();
         clickHouseEnabled = true;
+        currentHouse = CurrentHouse.None;
     }
 
     private void InitQuestData()
@@ -64,5 +68,15 @@ public class Game : MonoBehaviour {
         {
             return new List<Question>();
         }
+    }
+
+    public void SetCurrentHouse(CurrentHouse house)
+    {
+        currentHouse = house;
+    }
+
+    public bool isAnyHouseSelected()
+    {
+        return currentHouse != CurrentHouse.None;
     }
 }
