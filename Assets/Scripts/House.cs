@@ -68,7 +68,7 @@ public class House : MonoBehaviour {
     private void OnMouseEnter()
     {
         _isMouseOver = true;
-        if(EnterSound!=null)  EnterSound.Play();
+        if(EnterSound!=null && game.clickHouseEnabled)  EnterSound.Play();
             Addlable();
         AddHighlight();
     }
