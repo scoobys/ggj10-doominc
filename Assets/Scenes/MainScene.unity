@@ -2407,23 +2407,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &841088439
-Animator:
-  serializedVersion: 3
+--- !u!114 &841088439
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 841088436}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d13c26fdca01341d68cba642b2e0fc7c, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1373f2492b304c629d37f2e8e29b07b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1015393234
 GameObject:
   m_ObjectHideFlags: 0
@@ -3214,7 +3208,7 @@ Prefab:
     - target: {fileID: 114651911332556516, guid: 88b3d919c1d0547cf8ed8f595941f440,
         type: 2}
       propertyPath: defaultValue
-      value: 11
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 88b3d919c1d0547cf8ed8f595941f440, type: 2}
@@ -3552,7 +3546,7 @@ GameObject:
   - component: {fileID: 1285770365}
   m_Layer: 0
   m_Name: TransmissionBG
-  m_TagString: Untagged
+  m_TagString: TransmissionBG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

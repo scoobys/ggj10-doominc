@@ -73,7 +73,7 @@ public class RadioTowerController : MonoBehaviour {
         }
         else
         {
-            Debug.Log("update none");
+            // Debug.Log("update none");
         }
     }
 
