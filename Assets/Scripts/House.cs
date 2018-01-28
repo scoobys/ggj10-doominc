@@ -11,6 +11,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 public class House : MonoBehaviour {
+
+    private Game game;
     public List<Question> Questions;
 	private GameObject dialogBox;
 	private TextMeshProUGUI questText;
@@ -39,6 +41,7 @@ public class House : MonoBehaviour {
 
      void Awake()
     {
+        game = GameObject.FindGameObjectWithTag("Game").GetComponent<Game>();
         _questionPanel = GameObject.FindGameObjectWithTag("Question");
     }
 
@@ -51,7 +54,7 @@ public class House : MonoBehaviour {
         _isMouseOver = false;
         _lable = null;
         _transform = this.gameObject.GetComponent<Transform>();
-        Questions = dialogBoxHolder.GetQuestions(Name);
+        Questions = game.GetQuestions(Name);
         _clock = GameObject.FindGameObjectWithTag("Clock").GetComponent<ClockController>();
         _skyController = GameObject.FindGameObjectWithTag("Sky").GetComponent<SkyController>();
         _lastClick = DateTime.Now;
@@ -121,7 +124,7 @@ public class House : MonoBehaviour {
     {
         text.fontStyle = FontStyles.Underline;
     }
-    
+
     void OnMouseUp()
 	{
         if (Questions.Count > 0 && !_questionPanel.activeSelf)
