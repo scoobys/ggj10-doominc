@@ -11,7 +11,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 public class House : MonoBehaviour {
-    // päris
     public List<Question> Questions;
 	private GameObject dialogBox;
 	private TextMeshProUGUI questText;
@@ -29,7 +28,6 @@ public class House : MonoBehaviour {
 
     private bool _isMouseOver;
     private GameObject _lable;
-    private GameObject _questionLable;
     private GameObject _highlight;
     private Transform _transform;
     private ClockController _clock;
@@ -118,6 +116,12 @@ public class House : MonoBehaviour {
         else if (!_isMouseOver && b.a > 0.01F) b.a -= HighlightStep;
     }
 
+
+    void UnderlineText(TextMeshProUGUI text)
+    {
+        text.fontStyle = FontStyles.Underline;
+    }
+
     void OnMouseUp()
 	{
         if (Questions.Count > 0 && !_questionPanel.activeSelf)
@@ -137,6 +141,8 @@ public class House : MonoBehaviour {
                 }
                 Button b = buttons[i];
                 var answer = question.Answers[i];
+                var tmp = b.GetComponentInChildren<TextMeshProUGUI>();
+                tmp.text = answer.Name;
                 b.GetComponentInChildren<TextMeshProUGUI>().text = answer.Name; // nuppu tekst
                 b.onClick.RemoveAllListeners();
                 b.onClick.AddListener(delegate { HandleOptionSelected(answer); });
@@ -158,6 +164,5 @@ public class House : MonoBehaviour {
             _skyController.NextDay();
             _lastClick = DateTime.Now;
         }
-        Destroy(_questionLable);
     }
 }
