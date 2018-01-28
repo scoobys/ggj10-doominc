@@ -182,10 +182,6 @@ Prefab:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 1972768824605038, guid: 5e71da3500f5e4531bf570299e4ba0a0, type: 2}
-      propertyPath: m_TagString
-      value: Newspaper
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5e71da3500f5e4531bf570299e4ba0a0, type: 2}
   m_IsPrefabParent: 0
