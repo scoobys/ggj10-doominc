@@ -328,6 +328,27 @@
         </Answers>
         <Trigers />
       </Question>
+      <Question>
+        <Name>Your wife is angry. For some unknown reason.</Name>
+        <Answers>
+          <Answer>
+            <Name>Apologize.</Name>
+            <News>Accident at the manor as the mayor falls down the 2nd floor window and stabs himself several times.</News>
+            <Doom>1</Doom>
+          </Answer>
+          <Answer>
+            <Name>Get rid of the cat</Name>
+            <News>Crazy cat lady back to her senses, says "wont make that mistake again"</News>
+            <Doom>-1</Doom>
+          </Answer>
+          <Answer>
+            <Name>Try to make sense of her ramblings</Name>
+            <News>Terror at the manor! Woman claims housband left the seat up.</News>
+            <Doom>2</Doom>
+          </Answer>
+        </Answers>
+        <Trigers />
+      </Question>
     </Questions>
   </House>
   <House>
@@ -359,14 +380,17 @@
         <Answers>
           <Answer>
             <Name>Buy whatever the telemarketer is selling</Name>
+            <News>AI controlled tv remotes, a hot new product to have!</News>
             <Doom>-1</Doom>
           </Answer>
           <Answer>
             <Name>File a harassment law suit against the caller</Name>
+            <News>Girl scouts jailed for suspicion of sexual harassment.</News>
             <Doom>3</Doom>
           </Answer>
           <Answer>
             <Name>Throw your phone out of the window</Name>
+            <News>Freak accident when a rouge phone kills a man.</News>
             <Doom>1</Doom>
           </Answer>
         </Answers>
@@ -424,14 +448,17 @@
         <Answers>
           <Answer>
             <Name>Take it! What could possibly go wrong.</Name>
-            <Doom>-1</Doom>
+            <News>Deranged man climbs tree claims he is a squirrel</News>
+            <Doom>1</Doom>
           </Answer>
           <Answer>
             <Name>Dont take it</Name>
-            <Doom>-2</Doom>
+            <News>The queen too lazy to get up, announces a public holiday.</News>
+            <Doom>-1</Doom>
           </Answer>
           <Answer>
             <Name>Take it but dont use it.</Name>
+            <News>Man found eating flower, Other than that no news.</News>
             <Doom>0</Doom>
           </Answer>
         </Answers>
@@ -442,33 +469,39 @@
         <Answers>
           <Answer>
             <Name>Open it</Name>
-            <Doom>2</Doom>
+            <News>Freak accident as a man tried opening a bottle and killed 4 people and injured 7.</News>
+            <Doom>3</Doom>
           </Answer>
           <Answer>
             <Name>Give it to the priest</Name>
+            <News>Freak accident leaves the church crippled, sunday sabbath cancelled.</News>
             <Doom>-2</Doom>
           </Answer>
           <Answer>
             <Name>Ignore it and go back to the tavern</Name>
+            <News>Drunk man pretends hes a pigeon, situation contained.</News>
             <Doom>0</Doom>
           </Answer>
         </Answers>
         <Trigers />
       </Question>
       <Question>
-        <Name>The alchemist searches for a missing air elementalist</Name>
+        <Name>The alchemist searches for a missing air elemental</Name>
         <Answers>
           <Answer>
             <Name>Question the alchemists sanity and send him to the asylum for recovery.</Name>
+            <News>Village in panic after a derange man claimed the air is missing.</News>
             <Doom>-1</Doom>
           </Answer>
           <Answer>
             <Name>Help alchemist in his search</Name>
-            <Doom>-1</Doom>
+            <News>12 dead after a panic over a missing air elemental.</News>
+            <Doom>1</Doom>
           </Answer>
           <Answer>
             <Name>Lie to the alchemist that you saw the elemetalist in the woods.</Name>
-            <Doom>4</Doom>
+            <News>Man says hes not feeling well.</News>
+            <Doom>2</Doom>
           </Answer>
         </Answers>
         <Trigers />
@@ -477,11 +510,13 @@
         <Name>When you go to the alchemist tower, you see him in a trance and drawing spirals on the floor </Name>
         <Answers>
           <Answer>
-            <Name>Call for a doctor.</Name>
+            <Name>Try to help him.</Name>
+            <News>A simple game of twister gone wrong when a man lost the guide book.</News>
             <Doom>1</Doom>
           </Answer>
           <Answer>
             <Name>Just walk away.</Name>
+            <News>Man driven crazy for trying to draw a circle, attacks locals. 4 dead.</News>
             <Doom>2</Doom>
           </Answer>
         </Answers>
