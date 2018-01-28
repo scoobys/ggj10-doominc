@@ -13,6 +13,7 @@ public class Game : MonoBehaviour {
     public string villageName = "Doom";
 
 	private TextAsset questData;
+    private Dictionary<string, List<Question>> houseToQuestions;
 
     void Awake () {
         if (instance != null && instance != this) {
@@ -21,30 +22,25 @@ public class Game : MonoBehaviour {
         }
         instance = this;
         DontDestroyOnLoad(this.gameObject);
+        houseToQuestions = new Dictionary<string, List<Question>>();
+        InitQuestData();
     }
 
-    public List<Question> GetQuestions(string houseName)
+    private void InitQuestData()
     {
-
         questData = Resources.Load("questData") as TextAsset;
-        List<Question> Questions = new List<Question>();
         {
             try
             {
                 var a = new List<Assets.Models.House>();
                 var xs = new XmlSerializer(typeof(List<Assets.Models.House>));
-                
-                // using (var sr = new StreamReader(path))
                 using (var sr = new StringReader(questData.text))
                 {
                     a = (List<Assets.Models.House>)xs.Deserialize(sr);
                 }
                 a.ForEach(house =>
                 {
-                    if(house.Name == houseName)
-                    {
-                        Questions = house.Questions;
-                    }
+                    houseToQuestions[house.Name] = house.Questions;
                 });
             }
             catch (Exception e)
@@ -52,6 +48,10 @@ public class Game : MonoBehaviour {
                 Debug.Log(e);
             }
         }
-        return Questions;
+    }
+
+    public List<Question> GetQuestions(string houseName)
+    {
+        return houseToQuestions[houseName];
     }
 }
