@@ -27,6 +27,7 @@ public class House : MonoBehaviour {
     public CurrentHouse CurrentHouse;
 
     public AudioSource EnterSound;
+    public AudioSource Ambient;
 
     public float HighlightStep = 0.05F;
 
@@ -135,7 +136,7 @@ public class House : MonoBehaviour {
         {
             return;
         }
-        game.SetCurrentHouse(CurrentHouse);
+        game.SetCurrentHouse(this);
         // game.clickHouseEnabled = false;
         if (Questions.Count > 0 && !_questionPanel.activeSelf)
         {
