@@ -12,6 +12,7 @@ TagManager:
   - Main
   - Credits
   - New
+  - Input
   layers:
   - Default
   - TransparentFX
