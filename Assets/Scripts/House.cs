@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization;
 using System.Xml.Serialization;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -28,7 +27,6 @@ public class House : MonoBehaviour {
 
     private bool _isMouseOver;
     private GameObject _lable;
-    private GameObject _questionLable;
     private GameObject _highlight;
     private Transform _transform;
     private ClockController _clock;
@@ -194,6 +192,5 @@ public class House : MonoBehaviour {
             _skyController.NextDay();
             _lastClick = DateTime.Now;
         }
-        Destroy(_questionLable);
     }
 }
