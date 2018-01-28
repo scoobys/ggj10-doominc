@@ -29,6 +29,8 @@ public class LoadSceneOnClick : MonoBehaviour
         {
             _global.villageName = _input.text;
             _global.clickHouseEnabled = true;
+            _global.dayNumber = 0;
+            _global.newQuestions();
         }
         SceneManager.LoadScene(sceneIndex);
     }

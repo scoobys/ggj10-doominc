@@ -113,4 +113,9 @@ public class Game : MonoBehaviour {
     {
         return currentHouse != CurrentHouse.None;
     }
+
+    public void newQuestions()
+    {
+        InitQuestData();
+    }
 }
