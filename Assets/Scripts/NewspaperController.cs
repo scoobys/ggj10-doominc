@@ -56,8 +56,8 @@ public class NewspaperController : MonoBehaviour {
             return;
         }
         Debug.Assert(Game.instance != null);
-        nameText.text = Game.instance.villageName + "Ville Times";
-        headlineText.text = headline;
+        nameText.text = Game.instance.villageName + "ville Times";
+        headlineText.text = headline.ToUpper();
         thisAnimator.SetTrigger("Open");
         isOpen = true;
     }
