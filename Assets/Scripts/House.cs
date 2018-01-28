@@ -23,7 +23,6 @@ public class House : MonoBehaviour {
     public Vector3 LableScale = new Vector3(0.5F, 0.5F);
     public string Name;
 
-
     public AudioSource EnterSound;
 
     public float HighlightStep = 0.05F;
@@ -36,6 +35,7 @@ public class House : MonoBehaviour {
     private SkyController _skyController;
     private DateTime _lastClick;
     private GameObject _questionPanel;
+    private NewspaperController _newspaperController;
 
     // Use this for initialization
 
@@ -57,6 +57,7 @@ public class House : MonoBehaviour {
         Questions = game.GetQuestions(Name);
         _clock = GameObject.FindGameObjectWithTag("Clock").GetComponent<ClockController>();
         _skyController = GameObject.FindGameObjectWithTag("Sky").GetComponent<SkyController>();
+        _newspaperController = GameObject.FindGameObjectWithTag("Newspaper").GetComponent<NewspaperController>();
         _lastClick = DateTime.Now;
     }
 
@@ -170,6 +171,7 @@ public class House : MonoBehaviour {
             _questionPanel.SetActive(false);
             _clock.SetValueOffset(selectedOption.Doom);
             _skyController.NextDay();
+            _newspaperController.OpenDelayed(Game.instance.newspaperOpenDelay, (selectedOption.News != null ? selectedOption.News : "No news is good news"));
             _lastClick = DateTime.Now;
         }
     }

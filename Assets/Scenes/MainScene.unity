@@ -3194,6 +3194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   villageName: Doom
+  newspaperOpenDelay: 3
 --- !u!4 &2031761145
 Transform:
   m_ObjectHideFlags: 0
@@ -3246,65 +3247,35 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 33972137768591400, guid: 5e71da3500f5e4531bf570299e4ba0a0,
+    - target: {fileID: 114323751076612824, guid: 5e71da3500f5e4531bf570299e4ba0a0,
         type: 2}
-      propertyPath: m_Mesh
-      value: 
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114323751076612824, guid: 5e71da3500f5e4531bf570299e4ba0a0,
+        type: 2}
+      propertyPath: m_isInputParsingRequired
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 33608909475521764, guid: 5e71da3500f5e4531bf570299e4ba0a0,
         type: 2}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 23465165399011800, guid: 5e71da3500f5e4531bf570299e4ba0a0,
+    - target: {fileID: 114533981230578062, guid: 5e71da3500f5e4531bf570299e4ba0a0,
         type: 2}
-      propertyPath: m_SortingLayerID
-      value: -231688211
-      objectReference: {fileID: 0}
-    - target: {fileID: 23465165399011800, guid: 5e71da3500f5e4531bf570299e4ba0a0,
-        type: 2}
-      propertyPath: m_SortingLayer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 23465165399011800, guid: 5e71da3500f5e4531bf570299e4ba0a0,
-        type: 2}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 23458986694054930, guid: 5e71da3500f5e4531bf570299e4ba0a0,
-        type: 2}
-      propertyPath: m_SortingLayerID
-      value: -231688211
-      objectReference: {fileID: 0}
-    - target: {fileID: 23458986694054930, guid: 5e71da3500f5e4531bf570299e4ba0a0,
-        type: 2}
-      propertyPath: m_SortingLayer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 23458986694054930, guid: 5e71da3500f5e4531bf570299e4ba0a0,
-        type: 2}
-      propertyPath: m_SortingOrder
-      value: 2
+      propertyPath: m_havePropertiesChanged
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114533981230578062, guid: 5e71da3500f5e4531bf570299e4ba0a0,
         type: 2}
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114323751076612824, guid: 5e71da3500f5e4531bf570299e4ba0a0,
+    - target: {fileID: 33972137768591400, guid: 5e71da3500f5e4531bf570299e4ba0a0,
         type: 2}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114533981230578062, guid: 5e71da3500f5e4531bf570299e4ba0a0,
-        type: 2}
-      propertyPath: m_fontColor32.rgba
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114323751076612824, guid: 5e71da3500f5e4531bf570299e4ba0a0,
-        type: 2}
-      propertyPath: m_fontColor32.rgba
-      value: 0
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5e71da3500f5e4531bf570299e4ba0a0, type: 2}

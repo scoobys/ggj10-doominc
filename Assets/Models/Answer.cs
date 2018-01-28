@@ -9,6 +9,6 @@ namespace Assets.Models
     {
         public string Name { get; set; }
         public float Doom { get; set; }
-        public Question Result { get; set; }
+        public string News { get; set; }
     }
 }

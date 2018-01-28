@@ -10,9 +10,10 @@ public class NewspaperController : MonoBehaviour {
     private TextMeshPro nameText;
     private TextMeshPro headlineText;
 
-    // Debug stuff
-    //private float nextUpdateTime = float.NegativeInfinity;
-    //private float updateDelta = 5.0f;
+
+    private bool isDelayedOpenInProgress = false;
+    private float nextDelayedOpenTime = float.PositiveInfinity;
+    private string delayedOpenHeadline = "";
 
     void Awake () {
         thisAnimator = GetComponent<Animator>();
@@ -29,13 +30,26 @@ public class NewspaperController : MonoBehaviour {
     }
 
     // Debug stuff
-    //void Update() {
-    //    float t = Time.time;
-    //    if (nextUpdateTime < t) {
-    //        Open("Headline: " + t);
-    //        nextUpdateTime = t + updateDelta;
-    //    }
-    //}
+    void Update() {
+        float t = Time.time;
+        if (isDelayedOpenInProgress) {
+            if (nextDelayedOpenTime < t) {
+                Open(delayedOpenHeadline);
+                isDelayedOpenInProgress = false;
+                nextDelayedOpenTime = float.PositiveInfinity;
+            }
+        }
+    }
+
+    public void OpenDelayed(float offset, string headline) {
+        if (isDelayedOpenInProgress) {
+            return;
+        }
+
+        delayedOpenHeadline = headline;
+        nextDelayedOpenTime = Time.time + offset;
+        isDelayedOpenInProgress = true;
+    }
 
     public void Open(string headline) {
         if (isOpen) {

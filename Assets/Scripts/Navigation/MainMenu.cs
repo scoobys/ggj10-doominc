@@ -20,7 +20,10 @@ namespace Assets.Scripts.Navigation
         }
         public void Start()
         {
-            Navigate(0);
+            if(_new.activeSelf && _credits.activeSelf)
+            {
+                Navigate(0);
+            }
         }
         public void Navigate (int newState)
         {
@@ -37,6 +40,9 @@ namespace Assets.Scripts.Navigation
                     break;
                 case (int)MenuState.Credits:
                     _credits.SetActive(true);
+                    break;
+                default:
+                    _main.SetActive(true);
                     break;
             }
         }

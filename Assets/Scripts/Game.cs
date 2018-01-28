@@ -11,7 +11,7 @@ public class Game : MonoBehaviour {
     public static Game instance;
 
     public string villageName = "Doom";
-
+    public float newspaperOpenDelay = 3.0f;
     public bool clickHouseEnabled;
 
 	private TextAsset questData;
