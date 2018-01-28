@@ -121,7 +121,7 @@ public class House : MonoBehaviour {
     {
         text.fontStyle = FontStyles.Underline;
     }
-
+    
     void OnMouseUp()
 	{
         if (Questions.Count > 0 && !_questionPanel.activeSelf)
