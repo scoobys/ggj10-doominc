@@ -11,8 +11,8 @@ public class NewspaperController : MonoBehaviour {
     private TextMeshPro headlineText;
 
     // Debug stuff
-    private float nextUpdateTime = float.NegativeInfinity;
-    private float updateDelta = 5.0f;
+    //private float nextUpdateTime = float.NegativeInfinity;
+    //private float updateDelta = 5.0f;
 
     void Awake () {
         thisAnimator = GetComponent<Animator>();
@@ -28,17 +28,14 @@ public class NewspaperController : MonoBehaviour {
         Close();
     }
 
-    void Update() {
-        float t = Time.time;
-        if (nextUpdateTime < t) {
-            Open("Headline: " + t);
-            nextUpdateTime = t + updateDelta;
-        }
-    }
-
-    public void SetName(string name) {
-        nameText.text = name;
-    }
+    // Debug stuff
+    //void Update() {
+    //    float t = Time.time;
+    //    if (nextUpdateTime < t) {
+    //        Open("Headline: " + t);
+    //        nextUpdateTime = t + updateDelta;
+    //    }
+    //}
 
     public void Open(string headline) {
         if (isOpen) {
