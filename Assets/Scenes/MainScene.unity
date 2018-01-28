@@ -2814,6 +2814,11 @@ Prefab:
       propertyPath: endIsNighValue
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114651911332556516, guid: 88b3d919c1d0547cf8ed8f595941f440,
+        type: 2}
+      propertyPath: businessAsUsual
+      value: 
+      objectReference: {fileID: 753414295}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 88b3d919c1d0547cf8ed8f595941f440, type: 2}
   m_IsPrefabParent: 0
@@ -3336,7 +3341,7 @@ MonoBehaviour:
   Lable: {fileID: 21300000, guid: c6160a3fde61511498eff331e816d20c, type: 3}
   HighLight: {fileID: 21300000, guid: fd0b15bfec48e9f458107afecb8766a1, type: 3}
   LablePosition: {x: -16.04, y: -3.19, z: 0}
-  HighLightPosition: {x: 0, y: 0, z: 0}
+  HighLightPosition: {x: -15.7, y: -3.3, z: 0}
   LableScale: {x: 0.5, y: 0.5, z: 0}
   Name: Brothel
   CurrentHouse: 4

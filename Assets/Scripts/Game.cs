@@ -70,9 +70,10 @@ public class Game : MonoBehaviour {
         }
     }
 
-    public void SetCurrentHouse(CurrentHouse house)
+    public void SetCurrentHouse(House house)
     {
-        currentHouse = house;
+        currentHouse = house.CurrentHouse;
+        
         if (currentHouse == CurrentHouse.None)
         {
             clickHouseEnabled = true;
