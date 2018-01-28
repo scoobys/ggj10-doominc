@@ -9,7 +9,9 @@ TagManager:
   - Question
   - QuestionLable
   - Newspaper
-  - Game
+  - Main
+  - Credits
+  - New
   layers:
   - Default
   - TransparentFX
