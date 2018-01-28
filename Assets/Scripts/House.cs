@@ -92,12 +92,10 @@ public class House : MonoBehaviour {
 
     private void AddQuestionLable()
     {
-        _questionLable = new GameObject();
-        _questionLable.AddComponent<SpriteRenderer>();
-        _questionLable.transform.localScale = LableScale;
-        var a = _questionLable.GetComponent<SpriteRenderer>();
-        a.sprite = Lable;
-        a.sortingLayerName = "Panels";
+        var lable = GameObject.FindGameObjectWithTag("QuestionLable");
+        var image = lable.GetComponent<Image>();
+        image.preserveAspect = true;
+        image.sprite = Lable;
     }
 
     private void AddHighlight()
@@ -153,10 +151,10 @@ public class House : MonoBehaviour {
 	{
         if (Questions.Count > 0 && !_questionPanel.activeSelf)
         {
-            AddQuestionLable();
             var question = Questions[UnityEngine.Random.Range(0,Questions.Count)];
             dialogBox.SetActive(true);
             _questionPanel.SetActive(true);
+            AddQuestionLable();
             questText.text = question.Name;
             Button[] buttons = dialogBox.GetComponentsInChildren<Button>(true);
             Debug.Log("nuppe: " + buttons.Length);
